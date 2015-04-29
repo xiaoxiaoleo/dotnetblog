@@ -1,8 +1,0 @@
-F:\BiShe\blog2\blog2\bin\blog2.dll
-F:\BiShe\blog2\blog2\bin\blog2.pdb
-F:\BiShe\blog2\blog2\obj\Debug\blog2.dll
-F:\BiShe\blog2\blog2\obj\Debug\blog2.pdb
-F:\BiShe\dotnetblog\blog2\bin\blog2.dll
-F:\BiShe\dotnetblog\blog2\bin\blog2.pdb
-F:\BiShe\dotnetblog\blog2\obj\Debug\blog2.dll
-F:\BiShe\dotnetblog\blog2\obj\Debug\blog2.pdb

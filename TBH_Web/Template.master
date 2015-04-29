@@ -1,0 +1,207 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Template.master.cs" Inherits="MB.TheBeerHouse.UI.TemplateMaster" %>
+<%@ Register Src="Controls/NewsletterBox.ascx" TagName="NewsletterBox" TagPrefix="mb" %>
+<%@ Register Src="Controls/PersonalizationManager.ascx" TagName="PersonalizationManager" TagPrefix="mb" %>
+<%@ Register Src="Controls/RssReader.ascx" TagName="RssReader" TagPrefix="mb" %>
+<%@ Register src="Controls/ArticleListing.ascx" tagname="ArticleListing" tagprefix="mb" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
+
+
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+      <!-- Bootstrap Core CSS -->
+    <link href="~/Styles/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="~/Styles/grayscale.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="~/fonts/fornt1.css" rel="stylesheet" type="text/css">
+    <link href="~/fonts/fornt2.css" rel="stylesheet" type="text/css">
+    <title>xiaoxiaoleo BLOG</title>
+    <script type="text/javascript">
+
+        function AdjustColumnsHeight()
+        {
+            // get a reference to the three DIVS that make up the columns
+            var centerCol = window.document.getElementById('centercol');
+            var leftCol = window.document.getElementById('leftcol');
+            var rightCol = window.document.getElementById('rightcol');
+            // calculate the max height
+            var hCenterCol = centerCol.offsetHeight;
+            var hLeftCol = leftCol.offsetHeight;
+            var hRightCol = rightCol.offsetHeight;
+            var maxHeight = Math.max(hCenterCol, Math.max(hLeftCol, hRightCol));
+            // set the height of all 3 DIVS to the max height
+            centerCol.style.height = maxHeight + 'px';
+            leftCol.style.height = maxHeight + 'px';
+            rightCol.style.height = maxHeight + 'px';            
+            // Show the footer
+            window.document.getElementById('footer').style.visibility = 'inherit';
+        }
+        window.onload = function() { AdjustColumnsHeight(); }   
+   
+    </script>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<form id="Main" runat="server">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	   <div class="container">
+          <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#">
+                    <i class="fa fa-play-circle"></i>  <span class="light">xiaoxiaoleo</span> Blog
+                </a>
+            </div>
+
+         <div id="headermenu">
+          
+             <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1">
+             </asp:Menu>
+          
+         </div>
+      <div id="loginbox"> 
+      </div>
+	  </div>
+    </div>
+   </nav>
+
+   <div id="container">
+      <div id="container2">
+         <div id="centercol">
+            <div id="breadcrumb">
+               <mb:PersonalizationManager ID="PersonalizationManager1" runat="server" Visible="False" />
+               <asp:SiteMapPath ID="SiteMapPath1" runat="server" meta:resourcekey="SiteMapPath1Resource1" />
+            </div>      
+            
+            <asp:EditorZone ID="EditorZone1" runat="server" Width="100%" meta:resourcekey="EditorZone1Resource1">
+               <ZoneTemplate>                  
+                  <asp:AppearanceEditorPart ID="AppearanceEditorPart1" runat="server" meta:resourcekey="AppearanceEditorPart1Resource1" />
+                  <asp:BehaviorEditorPart ID="BehaviorEditorPart1" runat="server" meta:resourcekey="BehaviorEditorPart1Resource1" />
+                  <asp:LayoutEditorPart ID="LayoutEditorPart1" runat="server" meta:resourcekey="LayoutEditorPart1Resource1" />
+                  <asp:PropertyGridEditorPart ID="PropertyGridEditorPart1" runat="server" Title="Custom Properties" meta:resourcekey="PropertyGridEditorPart1Resource1" />
+               </ZoneTemplate>
+            </asp:EditorZone>                        
+            <asp:CatalogZone ID="CatalogZone1" runat="server" meta:resourcekey="CatalogZone1Resource1" >
+               <ZoneTemplate>
+                  <asp:DeclarativeCatalogPart ID="DeclarativeCatalogPart1" runat="server" Title="Site Catalog" meta:resourcekey="DeclarativeCatalogPart1Resource1">
+                     <WebPartsTemplate>
+                       
+                        <mb:RssReader id="rssReaderGeneric" runat="server" Title="RSS Reader" meta:resourcekey="rssReaderGenericResource1"/>
+                        <mb:RssReader id="rssLatestArticles" runat="server" Title="Latest Articles"
+                           RssUrl="~/GetArticlesRss.aspx" meta:resourcekey="rssLatestArticlesResource1"
+                           MoreText="More articles..." MoreUrl="~/BrowseArticles.aspx" />
+                     
+                
+                     </WebPartsTemplate>
+                  </asp:DeclarativeCatalogPart>
+                  <asp:PageCatalogPart ID="PageCatalogPart1" runat="server" Title="Local Page Catalog" meta:resourcekey="PageCatalogPart1Resource1" />
+               </ZoneTemplate>
+            </asp:CatalogZone>
+      
+            <div id="centercolcontent">
+             
+               <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                   <mb:ArticleListing id="ArticleListing1" runat="server" PublishedOnly="False" />
+                </asp:ContentPlaceHolder>
+               <div style="clear: both; margin-top: 5px;">
+                  <asp:WebPartZone ID="CenterZoneBottom" Runat="server" HeaderText="Center Zone Bottom" Width="100%" meta:resourcekey="CenterZoneBottomResource1"></asp:WebPartZone>
+                  <table border="0" cellpadding="2" cellspacing="0" width="100%">
+                     <tr>
+                        <td width="50%">
+                           <asp:WebPartZone ID="CenterZoneBottomLeft" Runat="server" HeaderText="Center Zone Bottom-Left" Width="100%" meta:resourcekey="CenterZoneBottomLeftResource1">
+                            </asp:WebPartZone>
+                        </td>
+                       <!-- <td width="50%">
+                           <asp:WebPartZone ID="CenterZoneBottomRight" Runat="server" HeaderText="Center Zone Bottom-Right" Width="100%" meta:resourcekey="CenterZoneBottomRightResource1"></asp:WebPartZone>
+                        </td>-->
+                     </tr>
+                  </table>
+               </div>               
+            </div>
+         </div>
+      </div>
+      <div id="leftcol">
+        <!--左侧栏-->
+	
+         <asp:LoginView ID="LoginView1" runat="server">
+            <AnonymousTemplate>
+               <asp:Login ID="Login" runat="server" Width="100%" FailureAction="RedirectToLoginPage" meta:resourcekey="LoginResource1">
+                  <LayoutTemplate>
+                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                           <td width="60px"><asp:Label runat="server" ID="lblUserName" AssociatedControlID="UserName" Text="Username:" meta:resourcekey="lblUserNameResource1" /></td>
+                           <td><asp:TextBox id="UserName" runat="server" Width="95%" meta:resourcekey="UserNameResource2" /></td>
+                           <td width="5px" align="right">
+                              <asp:RequiredFieldValidator ID="valRequireUserName" runat="server" SetFocusOnError="True"
+                                 ControlToValidate="UserName" Text="*" ValidationGroup="Login" meta:resourcekey="valRequireUserNameResource1" />
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><asp:Label runat="server" ID="lblPassword" AssociatedControlID="Password" Text="Password:" meta:resourcekey="lblPasswordResource1" /></td>
+                           <td><asp:TextBox ID="Password" runat="server" TextMode="Password"  Width="95%" meta:resourcekey="PasswordResource2" /></td>
+                           <td width="5px" align="right">
+                              <asp:RequiredFieldValidator ID="valRequirePassword" runat="server" SetFocusOnError="True"
+                                 ControlToValidate="Password" Text="*" ValidationGroup="Login" meta:resourcekey="valRequirePasswordResource1" />
+                           </td>
+                        </tr>
+                     </table>
+                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                           <td><asp:CheckBox ID="RememberMe" runat="server" Text="Remember me" meta:resourcekey="RememberMeResource1"></asp:CheckBox></td>
+                           <td align="right">
+                              <asp:ImageButton ID="Submit" runat="server" AlternateText="Login"
+                                 CommandName="Login" ImageUrl="~/images/go.gif" ValidationGroup="Login" meta:resourcekey="SubmitResource1" />
+                           </td>
+                           <td width="5px" align="right">&nbsp;</td>
+                        </tr>
+                     </table>
+                     <div style="border-top: solid 1px black; margin-top: 2px; padding-top: 2px">
+                        <asp:HyperLink ID="lnkRegister" runat="server" NavigateUrl="~/Register.aspx" meta:resourcekey="lnkRegisterResource1">Create new account</asp:HyperLink><br />
+                        <asp:HyperLink ID="lnkPasswordRecovery" runat="server" NavigateUrl="~/PasswordRecovery.aspx" meta:resourcekey="lnkPasswordRecoveryResource1">I forgot my password</asp:HyperLink>
+                     </div>
+                  </LayoutTemplate>
+               </asp:Login>
+            </AnonymousTemplate>
+            <LoggedInTemplate>
+               <div id="welcomebox">
+                  <asp:LoginName ID="LoginName1" runat="server" FormatString="{0}" meta:resourcekey="LoginName1Resource1" /><br />
+                  <asp:HyperLink ID="lnkProfile" runat="server" Text="Edit Profile" NavigateUrl="~/EditProfile.aspx" meta:resourcekey="lnkProfileResource1" /><br /> 
+                  <asp:LoginStatus ID="LoginStatus1" Runat="server" meta:resourcekey="LoginStatus1Resource1" />
+               </div>
+            </LoggedInTemplate>
+         </asp:LoginView>
+
+      </div>        
+   </div>
+ 
+
+  
+
+ <!-- Footer -->
+    <br><br>
+    <div class="footer  text-center navbar-fixed-bottom">
+			<li> 2015 </span>, Inc.</li>
+			<br>
+			<br>
+    </div>  
+   <script src="Scripts/bootstrap.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.easing.min.js" type="text/javascript"></script>
+    <script src="Scripts/grayscale.js" type="text/javascript"></script>
+    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+ 
+
+  
+
+</form>
+
+ </body>
+</html>
