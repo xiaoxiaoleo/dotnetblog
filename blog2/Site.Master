@@ -4,12 +4,12 @@
 <html lang="en">
 
 <head runat="server">
-    <title></title>
-        <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <title></title>
       <!-- Bootstrap Core CSS -->
     <link href="~/Styles/bootstrap.min.css" rel="stylesheet">
 
@@ -38,21 +38,19 @@
              <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
 				<li>
-                        <a class="page-scroll" href="index.php#about">About</a>
+                        <a class="page-scroll" href="Default.aspx">Home</a>
                 </li>
-                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
-                    <Items>
-                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
-                    </Items>
-                </asp:Menu>
+                <li>
+                        <a class="page-scroll" href="Default.aspx">About</a>
+                </li>
+           
 				 <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
                     <AnonymousTemplate>
-                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
+                      <li>  <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In </a></li>
                     </AnonymousTemplate>
                     <LoggedInTemplate>
-                        Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
-                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]
+                        <li><a href="~/Account/Home.aspx" ID="UserHome" runat="server"><asp:LoginName ID="HeadLoginName" runat="server" /> </a></li>
+                        <li><asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> </li>
                     </LoggedInTemplate>
                 </asp:LoginView>
 				
