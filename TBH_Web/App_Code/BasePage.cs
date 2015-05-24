@@ -8,7 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using MB.TheBeerHouse.BLL.Store;
+
 
 namespace MB.TheBeerHouse.UI
 {
@@ -42,9 +42,7 @@ namespace MB.TheBeerHouse.UI
             }
          }
 
-         if ((HttpContext.Current.Profile as ProfileCommon).ShoppingCart == null)
-            (HttpContext.Current.Profile as ProfileCommon).ShoppingCart = new ShoppingCart();
-
+         
          base.OnPreInit(e);
       }
 

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="About" xml:space="preserve">
-    <value>Chi Siamo</value>
+    <value>xiaoxiaoleo</value>
   </data>
   <data name="Add_Edit_Article" xml:space="preserve">
     <value>Aggiungi / Modifica Articolo</value>
@@ -141,9 +141,6 @@
   <data name="Browse_Articles" xml:space="preserve">
     <value>Sfoglia Articoli</value>
   </data>
-  <data name="Browse_Products" xml:space="preserve">
-    <value>Sfoglia Prodotti</value>
-  </data>
   <data name="Categories" xml:space="preserve">
     <value>Categorie</value>
   </data>
@@ -158,9 +155,6 @@
   </data>
   <data name="Edit_User" xml:space="preserve">
     <value>Modifica Utente</value>
-  </data>
-  <data name="Forum" xml:space="preserve">
-    <value>Forum</value>
   </data>
   <data name="Home" xml:space="preserve">
     <value>Home</value>

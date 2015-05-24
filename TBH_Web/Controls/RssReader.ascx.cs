@@ -89,7 +89,7 @@ namespace MB.TheBeerHouse.UI.Controls
 
             // create a DataTable and fill it with the RSS data,
             // then bind it to the Repeater control
-            XmlDataDocument feed = new XmlDataDocument();
+            XmlDocument feed = new XmlDocument();
             feed.Load(GetFullUrl(this.RssUrl));
             XmlNodeList posts = feed.GetElementsByTagName("item");
 

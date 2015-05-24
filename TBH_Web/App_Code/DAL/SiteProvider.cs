@@ -32,9 +32,5 @@ namespace MB.TheBeerHouse.DAL
          get { return ForumsProvider.Instance; }
       }
 
-      public static StoreProvider Store
-      {
-         get { return StoreProvider.Instance; }
-      }
    }
 }

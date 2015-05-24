@@ -123,9 +123,6 @@
   <data name="Add_Edit_Article" xml:space="preserve">
     <value>Add / Edit Article</value>
   </data>
-  <data name="Add_Edit_Product" xml:space="preserve">
-    <value>Add / Edit Product</value>
-  </data>
   <data name="Admin" xml:space="preserve">
     <value>Admin</value>
   </data>
@@ -140,9 +137,6 @@
   </data>
   <data name="Browse_Articles" xml:space="preserve">
     <value>Browse Articles</value>
-  </data>
-  <data name="Browse_Products" xml:space="preserve">
-    <value>Browse Products</value>
   </data>
   <data name="Categories" xml:space="preserve">
     <value>Categories</value>

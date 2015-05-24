@@ -35,8 +35,7 @@
       // get a reference to the previously anonymous user's profile
       ProfileCommon anonProfile = this.Profile.GetProfile(e.AnonymousID);
       // if set, copy its Theme and ShoppingCart to the current user's profile
-      if (anonProfile.ShoppingCart.Items.Count > 0)
-         this.Profile.ShoppingCart = anonProfile.ShoppingCart;
+ 
       if (!string.IsNullOrEmpty(anonProfile.Preferences.Theme))
          this.Profile.Preferences.Theme = anonProfile.Preferences.Theme;
       // delete the anonymous profile

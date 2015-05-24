@@ -19,8 +19,8 @@ namespace MB.TheBeerHouse.UI
          get { return _enablePersonalization; }
          set
          {
-            _enablePersonalization = value;
-            PersonalizationManager1.Visible = (this.Page.User.Identity.IsAuthenticated && value);
+            _enablePersonalization = false;
+            //PersonalizationManager1.Visible = (this.Page.User.Identity.IsAuthenticated && value);
          }
       }
 

@@ -25,21 +25,13 @@ namespace MB.TheBeerHouse.UI
 
       protected void Page_Load(object sender, EventArgs e)
       {
-         int forumID = 0;
-         // if a ForumID param is passed on the querystring, load the Forum with that ID,
-         // and use its title for the RSS's title
-         if (!string.IsNullOrEmpty(this.Request.QueryString["ForumID"]))
-         {
-            forumID = int.Parse(this.Request.QueryString["ForumID"]);
-            Forum forum = Forum.GetForumByID(forumID);
-            _rssTitle = forum.Title;
-         }
+  
 
          string sortExpr = "";
          if (!string.IsNullOrEmpty(this.Request.QueryString["SortExpr"]))
             sortExpr = this.Request.QueryString["SortExpr"];
 
-         List<Post> posts = Post.GetThreads(forumID, sortExpr, 0, Globals.Settings.Forums.RssItems);
+         List<Post> posts = Post.GetThreads(sortExpr, 0, Globals.Settings.Forums.RssItems);
          rptRss.DataSource = posts;
          rptRss.DataBind();
       }

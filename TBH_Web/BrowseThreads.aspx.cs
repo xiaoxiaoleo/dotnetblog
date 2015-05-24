@@ -9,7 +9,6 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using MB.TheBeerHouse;
-using MB.TheBeerHouse.BLL.Forums;
 
 namespace MB.TheBeerHouse.UI
 {
@@ -30,9 +29,7 @@ namespace MB.TheBeerHouse.UI
             lnkNewThread1.NavigateUrl = string.Format(lnkNewThread1.NavigateUrl, forumID);
             lnkNewThread2.NavigateUrl = lnkNewThread1.NavigateUrl;
 
-            Forum forum = Forum.GetForumByID(int.Parse(forumID));
-            this.Title = string.Format(this.Title, forum.Title);
-            ddlForums.SelectedValue = forumID;
+
 
             // if the user is not an admin, editor or moderator, hide the grid's column with 
             // the commands to delete, close or move a thread
@@ -63,7 +60,6 @@ namespace MB.TheBeerHouse.UI
             int threadPostID = Convert.ToInt32(
                gvwThreads.DataKeys[Convert.ToInt32(e.CommandArgument)][0]);
 
-            MB.TheBeerHouse.BLL.Forums.Post.CloseThread(threadPostID);
          }
       }
    }
