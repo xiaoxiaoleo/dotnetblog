@@ -1,19 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TBH_Web", "TBH_Web\", "{E43FA133-1CF0-4220-98D1-56D0AF70567D}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TheBlog", "TheBlog\", "{E43FA133-1CF0-4220-98D1-56D0AF70567D}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/TBH_Web"
-		Debug.AspNetCompiler.PhysicalPath = "TBH_Web\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\TBH_Web\"
+		Debug.AspNetCompiler.VirtualPath = "/TheBlog"
+		Debug.AspNetCompiler.PhysicalPath = "TheBlog\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\TheBlog\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/TBH_Web"
-		Release.AspNetCompiler.PhysicalPath = "TBH_Web\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\TBH_Web\"
+		Release.AspNetCompiler.VirtualPath = "/TheBlog"
+		Release.AspNetCompiler.PhysicalPath = "TheBlog\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\TheBlog\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
