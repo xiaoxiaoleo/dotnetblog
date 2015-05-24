@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" enableLocalization="true" >
-   <siteMapNode title="$Resources: SiteMap, Home" url="~/Default.aspx">
+   <siteMapNode title="$Resources: SiteMap, 首页" url="~/Default.aspx">
       <siteMapNode title="$Resources: SiteMap, Articles" url="~/ShowCategories.aspx">
          <siteMapNode title="$Resources: SiteMap, Browse_Articles" url="~/BrowseArticles.aspx">
             <siteMapNode title="$Resources: SiteMap, Article" url="~/ShowArticle.aspx" />
