@@ -10,6 +10,8 @@
          </td>
          <td style="text-align: right;">
             <asp:Panel runat="server" ID="panEditArticle">
+                <asp:LinkButton ID="LinkButton1" runat="server" 
+                    PostBackUrl="~/Admin/AddEditArticle.aspx?ID={0}">LinkButton</asp:LinkButton>
             <asp:ImageButton runat="server" ID="btnApprove"
                CausesValidation="false" AlternateText="Approve article" ImageUrl="~/Images/Checkmark.gif" 
                OnClientClick="if (confirm('Are you sure you want to approve this article?') == false) return false;" OnClick="btnApprove_Click" />
