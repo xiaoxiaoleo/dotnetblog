@@ -2,10 +2,6 @@
 <%@ MasterType VirtualPath="~/Template.master" %>
 
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" Runat="Server">
-   <div class="sectiontitle">Article categories</div>
-   <p></p>
-   Click on the title of the category for which you want to browse the articles:
-   <p></p>
    <asp:DataList ID="dlstCategories" EnableTheming="false" runat="server" 
       DataSourceID="objAllCategories" DataKeyField="ID"
       GridLines="None" Width="100%" RepeatColumns="2">

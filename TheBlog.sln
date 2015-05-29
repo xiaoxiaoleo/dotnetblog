@@ -21,8 +21,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TheBlog", "TheBlog\", "{E43
 		VWDPort = "37951"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TBHCustomEvents", "TBH_CustomEvents\TBHCustomEvents.csproj", "{0C021C6D-B110-4F5A-9D52-F8DB244553D6}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|.NET = Debug|.NET
@@ -43,16 +41,6 @@ Global
 		{E43FA133-1CF0-4220-98D1-56D0AF70567D}.Release|Any CPU.ActiveCfg = Debug|.NET
 		{E43FA133-1CF0-4220-98D1-56D0AF70567D}.Release|Mixed Platforms.ActiveCfg = Debug|.NET
 		{E43FA133-1CF0-4220-98D1-56D0AF70567D}.Release|Mixed Platforms.Build.0 = Debug|.NET
-		{0C021C6D-B110-4F5A-9D52-F8DB244553D6}.Debug|.NET.ActiveCfg = Debug|Any CPU
-		{0C021C6D-B110-4F5A-9D52-F8DB244553D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0C021C6D-B110-4F5A-9D52-F8DB244553D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0C021C6D-B110-4F5A-9D52-F8DB244553D6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{0C021C6D-B110-4F5A-9D52-F8DB244553D6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{0C021C6D-B110-4F5A-9D52-F8DB244553D6}.Release|.NET.ActiveCfg = Release|Any CPU
-		{0C021C6D-B110-4F5A-9D52-F8DB244553D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0C021C6D-B110-4F5A-9D52-F8DB244553D6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0C021C6D-B110-4F5A-9D52-F8DB244553D6}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{0C021C6D-B110-4F5A-9D52-F8DB244553D6}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
