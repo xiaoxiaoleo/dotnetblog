@@ -1,4 +1,4 @@
-<%@ Page Language="C#" ValidateRequest="false" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="SendingNewsletter.aspx.cs" Inherits="MB.TheBeerHouse.UI.Admin.SendingNewsletter" Title="The Beer House - Sending Newsletter" %>
+<%@ Page Language="C#" ValidateRequest="false" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="SendingNewsletter.aspx.cs" Inherits="MB.TheBeerHouse.UI.Admin.SendingNewsletter" Title="TheBlog - Sending Newsletter" %>
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" Runat="Server">
    <asp:Panel ID="panProgress" runat="server">
    <div class="sectiontitle">

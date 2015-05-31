@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="ManageUsers.aspx.cs" Inherits="MB.TheBeerHouse.UI.Admin.ManageUsers" Title="The Beer House - Account management" %>
+<%@ Page Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="ManageUsers.aspx.cs" Inherits="MB.TheBeerHouse.UI.Admin.ManageUsers" Title="TheBlog - Account management" %>
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" Runat="Server">
    <div class="sectiontitle">Account Management</div>
    <p></p>
@@ -21,7 +21,7 @@
    </asp:DropDownList> 
    contains 
    <asp:TextBox runat="server" ID="txtSearchText" /> 
-   <asp:Button runat="server" ID="btnSearch" Text="Search" OnClick="btnSearch_Click" />
+   <asp:Button  class="btn btn-primary" runat="server" ID="btnSearch" Text="Search" OnClick="btnSearch_Click" />
    <p></p>
    <asp:GridView ID="gvwUsers" runat="server" AutoGenerateColumns="false" DataKeyNames="UserName"
       OnRowCreated="gvwUsers_RowCreated" OnRowDeleting="gvwUsers_RowDeleting">

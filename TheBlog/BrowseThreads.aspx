@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="BrowseThreads.aspx.cs" Inherits="MB.TheBeerHouse.UI.BrowseThreads" Title="The Beer House - Browse Threads: {0}" %>
+<%@ Page Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="BrowseThreads.aspx.cs" Inherits="MB.TheBeerHouse.UI.BrowseThreads" Title="TheBlog - Browse Threads: {0}" %>
 <%@ MasterType VirtualPath="~/Template.master" %>
 <%@ Import Namespace="MB.TheBeerHouse" %>
 

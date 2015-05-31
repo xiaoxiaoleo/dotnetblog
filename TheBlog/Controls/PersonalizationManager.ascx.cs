@@ -9,7 +9,6 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using MB.TheBeerHouse;
-using MB.TheBeerHouse.BLL.Polls;
 
 namespace MB.TheBeerHouse.UI.Controls
 {

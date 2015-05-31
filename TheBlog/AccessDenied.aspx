@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AccessDenied.aspx.cs" Inherits="MB.TheBeerHouse.UI.AccessDenied" Title="The Beer House - Access Denied" MasterPageFile="~/Template.master" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AccessDenied.aspx.cs" Inherits="MB.TheBeerHouse.UI.AccessDenied" Title="TheBlog - Access Denied" MasterPageFile="~/Template.master" %>
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" Runat="Server">
 <asp:Image ID="imgLock" runat="server" ImageUrl="~/images/lock.gif" ImageAlign="left" AlternateText="Access denied" />
 

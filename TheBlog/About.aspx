@@ -2,7 +2,7 @@
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" Runat="Server">
     <div class="sectiontitle">About Us</div>
    <p></p>
-    <table cellpadding="2px"><tr><td>
+    <table  class="table"  cellpadding="2px"><tr><td>
       
     <td>
         <p style="text-align: justify;">

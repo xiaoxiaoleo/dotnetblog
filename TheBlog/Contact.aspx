@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="Contact.aspx.cs" Inherits="MB.TheBeerHouse.UI.Contact" Title="The Beer House - Contact Us" %>
+<%@ Page Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="Contact.aspx.cs" Inherits="MB.TheBeerHouse.UI.Contact" Title="TheBlog - Contact Us" %>
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" Runat="Server">
    <div class="sectiontitle">Contact Us</div>
    <p></p>
@@ -6,7 +6,7 @@
    
    For reporting errors on the site, or for general help with the site's source code, than fill the form below:
    <p></p>
-   <table cellpadding="2">
+   <table  class="table"  cellpadding="2">
       <tr>
          <td style="width: 80px;" class="fieldname"><asp:Label runat="server" ID="lblName" AssociatedControlID="txtName" Text="Your name:" /></td>
          <td style="width: 400px;"><asp:TextBox runat="server" ID="txtName" Width="100%" /></td>
@@ -45,7 +45,7 @@
          <td colspan="3" style="text-align: right;">
                <asp:Label runat="server" ID="lblFeedbackOK" Text="Your message has been successfully sent." SkinID="FeedbackOK" Visible="false" />
                <asp:Label runat="server" ID="lblFeedbackKO" Text="Sorry, there was a problem sending your message." SkinID="FeedbackKO" Visible="false" />
-               <asp:Button runat="server" ID="txtSubmit" Text="Send" OnClick="txtSubmit_Click" />
+               <asp:Button  class="btn btn-primary" runat="server" ID="txtSubmit" Text="Send" OnClick="txtSubmit_Click" />
                <asp:ValidationSummary runat="server" ID="valSummary" ShowSummary="false" ShowMessageBox="true" />
          </td>            
       </tr>

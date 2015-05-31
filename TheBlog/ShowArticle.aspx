@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/Template.master" ValidateRequest="false" AutoEventWireup="true" CodeFile="ShowArticle.aspx.cs" Inherits="MB.TheBeerHouse.UI.ShowArticle" Title="The Beer House - Article: {0}" %>
+<%@ Page Language="C#" MasterPageFile="~/Template.master" ValidateRequest="false" AutoEventWireup="true" CodeFile="ShowArticle.aspx.cs" Inherits="MB.TheBeerHouse.UI.ShowArticle" Title="TheBlog - Article: {0}" %>
 <%@ Register Src="Controls/RatingDisplay.ascx" TagName="RatingDisplay" TagPrefix="mb" %>
 
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" Runat="Server">

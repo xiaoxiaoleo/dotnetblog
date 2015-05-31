@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="ManageArticles.aspx.cs" Inherits="MB.TheBeerHouse.UI.Admin.ManageArticles" Title="The Beer House - Manage Articles" %>
+<%@ Page Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="ManageArticles.aspx.cs" Inherits="MB.TheBeerHouse.UI.Admin.ManageArticles" Title="TheBlog - Manage Articles" %>
 <%@ Register Src="../Controls/ArticleListing.ascx" TagName="ArticleListing" TagPrefix="mb" %>
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" Runat="Server">
    <div class="sectiontitle">Manage Articles</div>

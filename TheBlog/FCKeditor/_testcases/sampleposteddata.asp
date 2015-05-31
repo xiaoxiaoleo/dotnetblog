@@ -26,7 +26,7 @@
 		<h1>FCKeditor - Samples - Posted Data</h1>
 		This page lists all data posted by the form.
 		<hr>
-		<table width="100%" border="1" cellspacing="0" bordercolor="#999999">
+		<table  class="table"  width="100%" border="1" cellspacing="0" bordercolor="#999999">
 			<tr style="FONT-WEIGHT: bold; COLOR: #dddddd; BACKGROUND-COLOR: #999999">
 				<td noWrap>Field Name&nbsp;&nbsp;</td>
 				<td>Value</td>

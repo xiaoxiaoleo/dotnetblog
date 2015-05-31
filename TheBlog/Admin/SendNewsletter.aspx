@@ -1,4 +1,4 @@
-<%@ Page Language="C#" ValidateRequest="false" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="SendNewsletter.aspx.cs" Inherits="MB.TheBeerHouse.UI.Admin.SendNewsletter" Title="The Beer House - Send Newsletter" %>
+<%@ Page Language="C#" ValidateRequest="false" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="SendNewsletter.aspx.cs" Inherits="MB.TheBeerHouse.UI.Admin.SendNewsletter" Title="TheBlog - Send Newsletter" %>
 <%@ Register Assembly="FredCK.FCKeditorV2" Namespace="FredCK.FCKeditorV2" TagPrefix="FCKeditorV2" %>
 
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" Runat="Server">
@@ -25,7 +25,7 @@
    <fckeditorv2:fckeditor id="txtHtmlBody" runat="server" 
       ToolbarSet="TheBeerHouse" Height="400px" Width="99%" />
    <p></p>
-   <asp:Button ID="btnSend" runat="server" Text="Send" ValidationGroup="Newsletter"
+   <asp:Button  class="btn btn-primary" ID="btnSend" runat="server" Text="Send" ValidationGroup="Newsletter"
       OnClientClick="if (confirm('Are you sure you want to send the newsletter?') == false) return false;" OnClick="btnSend_Click" />
    </asp:Panel>
    <asp:Panel ID="panWait" runat="server" Visible="false">      

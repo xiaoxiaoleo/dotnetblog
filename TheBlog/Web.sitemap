@@ -10,7 +10,7 @@
 
       <siteMapNode title="$Resources: SiteMap, About" url="~/About.aspx" />
       <siteMapNode title="$Resources: SiteMap, Contact" url="~/Contact.aspx" />
-      <siteMapNode title="$Resources: SiteMap, Admin" url="~/Admin/Default.aspx" roles="Administrators,Editors,Contributors">
+      <siteMapNode title="$Resources: SiteMap, Admin" url="~/Admin/Default.aspx" roles="Administrators">
          <siteMapNode title="$Resources: SiteMap, Manage_Users" url="~/Admin/ManageUsers.aspx" >
             <siteMapNode title="$Resources: SiteMap, Edit_User" url="~/Admin/EditUser.aspx" />
          </siteMapNode>
@@ -19,9 +19,7 @@
             <siteMapNode title="$Resources: SiteMap, Categories" url="~/Admin/ManageCategories.aspx" />
             <siteMapNode title="$Resources: SiteMap, Comments" url="~/Admin/ManageComments.aspx" />
          </siteMapNode>
-  
 
-         <siteMapNode title="$Resources: SiteMap, Send_Newsletter" url="~/Admin/SendNewsletter.aspx" />
          <siteMapNode title="$Resources: SiteMap, Sending_Newsletter" url="~/Admin/SendingNewsletter.aspx" />
       </siteMapNode>
    </siteMapNode>

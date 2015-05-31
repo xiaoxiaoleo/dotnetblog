@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" MasterPageFile="~/Template.master" Inherits="MB.TheBeerHouse.UI.Admin._Default" Title="The Beer House - Administration" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" MasterPageFile="~/Template.master" Inherits="MB.TheBeerHouse.UI.Admin._Default" Title="TheBlog - Administration" %>
 <asp:Content ID="MainContent" runat="server" ContentPlaceHolderID="MainContent">
 
 <div class="sectiontitle">Administration</div>

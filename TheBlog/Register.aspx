@@ -1,5 +1,5 @@
 <%@ Page Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true"
-   CodeFile="Register.aspx.cs" Inherits="MB.TheBeerHouse.UI.Register" Title="The Beer House - Register" %>
+   CodeFile="Register.aspx.cs" Inherits="MB.TheBeerHouse.UI.Register" Title="TheBlog - Register" %>
 <%@ Register Src="Controls/UserProfile.ascx" TagName="UserProfile" TagPrefix="mb" %>
 
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" runat="Server">
@@ -10,7 +10,7 @@
             <ContentTemplate>
             <div class="sectiontitle">Create your new account</div>
             <p></p>
-            <table cellpadding="2">
+            <table  class="table"  cellpadding="2">
                <tr>
                   <td style="width: 110px;" class="fieldname"><asp:Label runat="server" ID="lblUserName" AssociatedControlID="UserName" Text="Username:" /></td>
                   <td style="width: 300px;"><asp:TextBox runat="server" ID="UserName" Width="100%" /></td>

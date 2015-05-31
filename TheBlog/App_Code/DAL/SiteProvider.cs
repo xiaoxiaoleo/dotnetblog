@@ -17,20 +17,12 @@ namespace MB.TheBeerHouse.DAL
          get { return ArticlesProvider.Instance; }
       }
 
-      public static PollsProvider Polls
-      {
-         get { return PollsProvider.Instance; }
-      }
 
       public static NewslettersProvider Newsletters
       {
          get { return NewslettersProvider.Instance; }
       }
 
-      public static ForumsProvider Forums
-      {
-         get { return ForumsProvider.Instance; }
-      }
 
    }
 }

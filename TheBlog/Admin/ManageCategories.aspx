@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/Template.master" ValidateRequest="false" AutoEventWireup="true" CodeFile="ManageCategories.aspx.cs" Inherits="MB.TheBeerHouse.UI.Admin.ManageCategories" Title="The Beer House - Manage Categories" %>
+<%@ Page Language="C#" MasterPageFile="~/Template.master" ValidateRequest="false" AutoEventWireup="true" CodeFile="ManageCategories.aspx.cs" Inherits="MB.TheBeerHouse.UI.Admin.ManageCategories" Title="TheBlog - Manage Categories" %>
 <%@ Register Src="../Controls/FileUploader.ascx" TagName="FileUploader" TagPrefix="mb" %>
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" Runat="Server">   
    <div class="sectiontitle">Manage Article Categories</div>

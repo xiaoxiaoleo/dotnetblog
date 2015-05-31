@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/Template.master" ValidateRequest="false" AutoEventWireup="true" CodeFile="ArchivedNewsletters.aspx.cs" Inherits="MB.TheBeerHouse.UI.ArchivedNewsletters" Title="The Beer House - Archived Newsletters" %>
+<%@ Page Language="C#" MasterPageFile="~/Template.master" ValidateRequest="false" AutoEventWireup="true" CodeFile="ArchivedNewsletters.aspx.cs" Inherits="MB.TheBeerHouse.UI.ArchivedNewsletters" Title="TheBlog - Archived Newsletters" %>
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" Runat="Server">   
    <div class="sectiontitle">Archived Newsletters</div>
    <p>Here is the list of archived newsletters sent in the past. Click on the newsletter's subject to read the whole content.

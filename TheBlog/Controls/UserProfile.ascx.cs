@@ -45,8 +45,6 @@ namespace MB.TheBeerHouse.UI.Controls
       {
          if (!this.IsPostBack)
          {
-            ddlCountries.DataSource = Helpers.GetCountries();
-            ddlCountries.DataBind();
 
             // if the UserName property contains an emtpy string, retrieve the profile
             // for the current user, otherwise for the specified user
@@ -61,17 +59,9 @@ namespace MB.TheBeerHouse.UI.Controls
             ddlGenders.SelectedValue = profile.Gender;
             if (profile.BirthDate != DateTime.MinValue)
                txtBirthDate.Text = profile.BirthDate.ToShortDateString();
-            ddlOccupations.SelectedValue = profile.Occupation;
             txtWebsite.Text = profile.Website;
             txtStreet.Text = profile.Address.Street;
-            txtCity.Text = profile.Address.City;
-            txtPostalCode.Text = profile.Address.PostalCode;
-            txtState.Text = profile.Address.State;
-            ddlCountries.SelectedValue = profile.Address.Country;
             txtPhone.Text = profile.Contacts.Phone;
-            txtFax.Text = profile.Contacts.Fax;
-            txtAvatarUrl.Text = profile.Forum.AvatarUrl;
-            txtSignature.Text = profile.Forum.Signature;
          }
       }
 
@@ -91,17 +81,9 @@ namespace MB.TheBeerHouse.UI.Controls
          profile.Gender = ddlGenders.SelectedValue;
          if (txtBirthDate.Text.Trim().Length > 0)
             profile.BirthDate = DateTime.Parse(txtBirthDate.Text);
-         profile.Occupation = ddlOccupations.SelectedValue;
          profile.Website = txtWebsite.Text;
          profile.Address.Street = txtStreet.Text;
-         profile.Address.City = txtCity.Text;
-         profile.Address.PostalCode = txtPostalCode.Text;
-         profile.Address.State = txtState.Text;
-         profile.Address.Country = ddlCountries.SelectedValue;
-         profile.Contacts.Phone = txtPhone.Text;
-         profile.Contacts.Fax = txtFax.Text;
-         profile.Forum.AvatarUrl = txtAvatarUrl.Text;
-         profile.Forum.Signature = txtSignature.Text;
+         profile.Contacts.Phone = txtPhone.Text; 
          profile.Save();
       }
    }

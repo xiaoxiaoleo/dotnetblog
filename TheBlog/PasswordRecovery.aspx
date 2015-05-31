@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="PasswordRecovery.aspx.cs" Inherits="MB.TheBeerHouse.UI.PasswordRecovery" Title="The Beer House - Password Recovery" %>
+<%@ Page Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="PasswordRecovery.aspx.cs" Inherits="MB.TheBeerHouse.UI.PasswordRecovery" Title="TheBlog - Password Recovery" %>
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" Runat="Server">
    <div class="sectiontitle">Recover your password</div>
    <p></p>
@@ -8,7 +8,7 @@
       <UserNameTemplate>
          <div class="sectionsubtitle">Step 1: enter your username</div>
          <p></p>
-         <table cellpadding="2">
+         <table  class="table"  cellpadding="2">
             <tr>
                <td style="width: 80px;" class="fieldname"><asp:Label runat="server" ID="lblUsername" AssociatedControlID="UserName" Text="Username:" /></td>
                <td style="width: 300px;"><asp:TextBox ID="UserName" runat="server" Width="100%"></asp:TextBox></td>
@@ -19,14 +19,14 @@
             </tr>
             <td colspan="3" style="text-align: right;">
                <asp:Label ID="FailureText" runat="server" SkinID="FeedbackKO" EnableViewState="False" /> 
-               <asp:Button ID="SubmitButton" runat="server" CommandName="Submit" Text="Submit" ValidationGroup="PasswordRecovery1" />
+               <asp:Button  class="btn btn-primary" ID="SubmitButton" runat="server" CommandName="Submit" Text="Submit" ValidationGroup="PasswordRecovery1" />
             </td>
          </table>         
       </UserNameTemplate>
       <QuestionTemplate>
          <div class="sectionsubtitle">Step 2: answer the following question</div>
          <p></p>
-         <table cellpadding="2">
+         <table  class="table"  cellpadding="2">
             <tr>
                <td style="width: 80px;" class="fieldname">Username:</td>
                <td style="width: 300px;"><asp:Literal ID="UserName" runat="server"></asp:Literal></td>
@@ -48,7 +48,7 @@
             <tr>
                <td colspan="3" style="text-align: right;">
                   <asp:Label ID="FailureText" runat="server" SkinID="FeedbackKO" EnableViewState="False" /> 
-                  <asp:Button ID="SubmitButton" runat="server" CommandName="Submit" Text="Submit" ValidationGroup="PasswordRecovery1" />                     
+                  <asp:Button  class="btn btn-primary" ID="SubmitButton" runat="server" CommandName="Submit" Text="Submit" ValidationGroup="PasswordRecovery1" />                     
                </td>
             </tr>
          </table>         

@@ -150,9 +150,6 @@
   <data name="Contact" xml:space="preserve">
     <value>Contatti</value>
   </data>
-  <data name="Departments" xml:space="preserve">
-    <value>Dipartimenti</value>
-  </data>
   <data name="Edit_User" xml:space="preserve">
     <value>Modifica Utente</value>
   </data>

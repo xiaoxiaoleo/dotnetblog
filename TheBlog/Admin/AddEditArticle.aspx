@@ -1,4 +1,4 @@
-<%@ Page Language="C#" ValidateRequest="false" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="AddEditArticle.aspx.cs" Inherits="MB.TheBeerHouse.UI.Admin.AddEditArticle" Title="The Beer House - Add/Edit Article" %>
+<%@ Page Language="C#" ValidateRequest="false" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="AddEditArticle.aspx.cs" Inherits="MB.TheBeerHouse.UI.Admin.AddEditArticle" Title="TheBlog - Add/Edit Article" %>
 <%@ Register Src="../Controls/FileUploader.ascx" TagName="FileUploader" TagPrefix="mb" %>
 <%@ Register Src="../Controls/RatingDisplay.ascx" TagName="RatingDisplay" TagPrefix="mb" %>
 <%@ Register Assembly="FredCK.FCKeditorV2" Namespace="FredCK.FCKeditorV2" TagPrefix="FCKeditorV2" %>

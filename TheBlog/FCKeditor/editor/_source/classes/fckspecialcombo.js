@@ -32,7 +32,7 @@ var FCKSpecialCombo = function( caption )
 	this._Panel.StyleSheet = FCKConfig.SkinPath + 'fck_contextmenu.css' ;
 	this._Panel.Create() ;
 	this._Panel.PanelDiv.className += ' SC_Panel' ;
-	this._Panel.PanelDiv.innerHTML = '<table cellpadding="0" cellspacing="0" width="100%" style="TABLE-LAYOUT: fixed"><tr><td nowrap></td></tr></table>' ;
+	this._Panel.PanelDiv.innerHTML = '<table   cellpadding="0" cellspacing="0" width="100%" style="TABLE-LAYOUT: fixed"><tr><td nowrap></td></tr></table>' ;
 	
 	this._ItemsHolderEl = this._Panel.PanelDiv.getElementsByTagName('TD')[0] ;
 }
@@ -141,7 +141,7 @@ FCKSpecialCombo.prototype.Create = function( targetElement )
 	var oField = this._OuterTable.rows[0].insertCell(-1).appendChild( document.createElement( 'DIV' ) ) ;
 	oField.className = 'SC_Field' ;
 	oField.style.width = this.FieldWidth + 'px' ;
-	oField.innerHTML = '<table width="100%" cellpadding="0" cellspacing="0" style="TABLE-LAYOUT: fixed;" unselectable="on"><tbody><tr><td class="SC_FieldLabel" unselectable="on"><label unselectable="on">&nbsp;</label></td><td class="SC_FieldButton" unselectable="on">&nbsp;</td></tr></tbody></table>' ;
+	oField.innerHTML = '<table    width="100%" cellpadding="0" cellspacing="0" style="TABLE-LAYOUT: fixed;" unselectable="on"><tbody><tr><td class="SC_FieldLabel" unselectable="on"><label unselectable="on">&nbsp;</label></td><td class="SC_FieldButton" unselectable="on">&nbsp;</td></tr></tbody></table>' ;
 
 	this._LabelEl = oField.getElementsByTagName('label')[0] ;
 	this._LabelEl.innerHTML = this.Label ;
@@ -201,7 +201,7 @@ function FCKSpecialCombo_OnClick( e )
 Sample Combo Field HTML output:
 
 <div class="SC_Field" style="width: 80px;">
-	<table width="100%" cellpadding="0" cellspacing="0" style="table-layout: fixed;">
+	<table    width="100%" cellpadding="0" cellspacing="0" style="table-layout: fixed;">
 		<tbody>
 			<tr>
 				<td class="SC_FieldLabel"><label>&nbsp;</label></td>

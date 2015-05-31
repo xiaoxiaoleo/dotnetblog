@@ -391,14 +391,14 @@ function SetUrl( url )
 		</script>
 	</head>
 	<body scroll="no" style="OVERFLOW: hidden">
-		<table height="100%" cellSpacing="0" cellPadding="0" width="100%" border="0">
+		<table  class="table"  height="100%" cellSpacing="0" cellPadding="0" width="100%" border="0">
 			<tr>
 				<td vAlign="top" height="100%">
 					<div id="divGeneral">
 						<span fckLang="DlgDocPageTitle">Page Title</span><br>
 						<input id="txtPageTitle" style="WIDTH: 100%" type="text">
 						<br>
-						<table cellSpacing="0" cellPadding="0" border="0">
+						<table  class="table"  cellSpacing="0" cellPadding="0" border="0">
 							<tr>
 								<td>
 									<span fckLang="DlgDocLangDir">Language Direction</span><br>
@@ -416,7 +416,7 @@ function SetUrl( url )
 							</tr>
 						</table>
 						<br>
-						<table cellSpacing="0" cellPadding="0" width="100%" border="0">
+						<table  class="table"  cellSpacing="0" cellPadding="0" width="100%" border="0">
 							<tr>
 								<td noWrap><span fckLang="DlgDocCharSet">Character Set Encoding</span><br>
 									<select id="selCharSet" onchange="CheckOther( this, 'txtCustomCharSet' );">
@@ -484,7 +484,7 @@ function SetUrl( url )
 							fckLang="DlgCellBtnSelect"><br>
 						<br>
 						<span fckLang="DlgDocBgImage">Background Image URL</span><br>
-						<table cellSpacing="0" cellPadding="0" width="100%" border="0">
+						<table  class="table"  cellSpacing="0" cellPadding="0" width="100%" border="0">
 							<tr>
 								<td width="100%"><input id="txtBackImage" style="WIDTH: 100%" type="text" onchange="UpdatePreview();" onkeyup="UpdatePreview();"></td>
 								<td nowrap>&nbsp;<input id="btnBrowse" onclick="BrowseServerBack();" type="button" fckLang="DlgBtnBrowseServer" value="Browse Server" fckLang="DlgBtnBrowseServer"></td>
@@ -494,7 +494,7 @@ function SetUrl( url )
 							Background</label>
 					</div>
 					<div id="divColors" style="DISPLAY: none">
-						<table cellSpacing="0" cellPadding="0" width="100%" border="0">
+						<table  class="table"  cellSpacing="0" cellPadding="0" width="100%" border="0">
 							<tr>
 								<td>
 									<span fckLang="DlgDocCText">Text</span><br>
@@ -510,13 +510,13 @@ function SetUrl( url )
 									<input id="txtColorActive" type="text" onchange="UpdatePreview();" onkeyup="UpdatePreview();"><input onclick="SelectColor( 'ColorActive' )" type="button" value="Select..." fckLang="DlgCellBtnSelect">
 								</td>
 								<td valign="middle" align="center">
-									<table cellspacing="2" cellpadding="0" border="0">
+									<table  class="table"  cellspacing="2" cellpadding="0" border="0">
 										<tr>
 											<td><span fckLang="DlgDocMargins">Page Margins</span></td>
 										</tr>
 										<tr>
 											<td style="BORDER: #000000 1px solid; PADDING: 5px">
-												<table cellpadding="0" cellspacing="0" border="0" dir="ltr">
+												<table  class="table"  cellpadding="0" cellspacing="0" border="0" dir="ltr">
 													<tr>
 														<td align="center" colspan="3">
 															<span fckLang="DlgDocMaTop">Top</span><br>

@@ -147,9 +147,6 @@
   <data name="Contact" xml:space="preserve">
     <value>Contact</value>
   </data>
-  <data name="Departments" xml:space="preserve">
-    <value>Departments</value>
-  </data>
   <data name="Edit_User" xml:space="preserve">
     <value>Edit User</value>
   </data>

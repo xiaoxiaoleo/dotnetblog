@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/Template.master" ValidateRequest="false" AutoEventWireup="true" CodeFile="ShowNewsletter.aspx.cs" Inherits="MB.TheBeerHouse.UI.ShowNewsletter" Title="The Beer House - Newsletter: " %>
+<%@ Page Language="C#" MasterPageFile="~/Template.master" ValidateRequest="false" AutoEventWireup="true" CodeFile="ShowNewsletter.aspx.cs" Inherits="MB.TheBeerHouse.UI.ShowNewsletter" Title="TheBlog - Newsletter: " %>
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" Runat="Server">   
    <div class="sectiontitle">Newsletter: <asp:Literal runat="server" ID="lblSubject" /></div>
    <p></p>

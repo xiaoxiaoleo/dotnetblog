@@ -27,7 +27,7 @@
          <ItemTemplate>
 <div  class="container col-md-10 col-md-offset-1" >
 <!--Display form-->
-<table class="table table-condensed"><tr><td>               
+<table  class="table"  class="table table-condensed"><tr><td>               
                <div class="articletitle">
                <asp:HyperLink runat="server" ID="lnkTitle" CssClass="articletitle" Text='<%# Eval("Title") %>'
                   NavigateUrl='<%# "~/ShowArticle.aspx?ID=" + Eval("ID") %>'/> 

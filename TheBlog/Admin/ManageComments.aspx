@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/Template.master" ValidateRequest="false" AutoEventWireup="true" CodeFile="ManageComments.aspx.cs" Inherits="MB.TheBeerHouse.UI.Admin.ManageComments" Title="The Beer House - Manage Article Comments" %>
+<%@ Page Language="C#" MasterPageFile="~/Template.master" ValidateRequest="false" AutoEventWireup="true" CodeFile="ManageComments.aspx.cs" Inherits="MB.TheBeerHouse.UI.Admin.ManageComments" Title="TheBlog - Manage Article Comments" %>
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" Runat="Server">
    <div class="sectiontitle">Manage Article Comments</div>
    <p></p>

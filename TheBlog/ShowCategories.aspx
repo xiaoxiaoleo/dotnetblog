@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="ShowCategories.aspx.cs" Inherits="MB.TheBeerHouse.UI.ShowCategories" Title="The Beer House - Article Categories" %>
+<%@ Page Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="ShowCategories.aspx.cs" Inherits="MB.TheBeerHouse.UI.ShowCategories" Title="TheBlog - Article Categories" %>
 <%@ MasterType VirtualPath="~/Template.master" %>
 
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" Runat="Server">
@@ -6,7 +6,7 @@
       DataSourceID="objAllCategories" DataKeyField="ID"
       GridLines="None" Width="100%" RepeatColumns="2">
       <ItemTemplate>
-         <table cellpadding="6" style="width: 100%;">
+         <table  class="table"  cellpadding="6" style="width: 100%;">
             <tr>
                <td style="width: 1px;">
                <asp:HyperLink runat="server" ID="lnkCatImage" NavigateUrl='<%# "BrowseArticles.aspx?CatID=" + Eval("ID") %>' >

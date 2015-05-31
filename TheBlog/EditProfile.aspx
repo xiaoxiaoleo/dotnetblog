@@ -1,11 +1,11 @@
-<%@ Page Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="EditProfile.aspx.cs" Inherits="MB.TheBeerHouse.UI.EditProfile" Title="The Beer House - Edit Profile" %>
+<%@ Page Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="EditProfile.aspx.cs" Inherits="MB.TheBeerHouse.UI.EditProfile" Title="TheBlog - Edit Profile" %>
 <%@ Register Src="Controls/UserProfile.ascx" TagName="UserProfile" TagPrefix="mb" %>
 
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" Runat="Server">
-   <div class="sectiontitle">Change your password</div><p></p>
+    <div class="sectiontitle">Change your password</div><p></p>
    <asp:ChangePassword ID="ChangePassword1" runat="server">
       <ChangePasswordTemplate>         
-         <table cellpadding="2">
+         <table  class="table"  cellpadding="2">
             <tr>
                <td style="width: 110px;" class="fieldname"><asp:Label runat="server" ID="lblCurrentPassword" AssociatedControlID="CurrentPassword" Text="Current password:" /></td>
                <td style="width: 300px;"><asp:TextBox ID="CurrentPassword" TextMode="Password" runat="server" Width="100%"></asp:TextBox></td>
@@ -39,7 +39,7 @@
             </tr>
             <td colspan="3" style="text-align: right;">
                <asp:Label ID="FailureText" runat="server" SkinID="FeedbackKO" EnableViewState="False" /> 
-               <asp:Button ID="ChangePasswordPushButton" runat="server" CommandName="ChangePassword"
+               <asp:Button  class="btn btn-primary" ID="ChangePasswordPushButton" runat="server" CommandName="ChangePassword"
                   Text="Change Password" ValidationGroup="ChangePassword1" />
             </td>
          </table>
@@ -57,18 +57,13 @@
    </asp:ChangePassword>
    <p></p>
    <hr style="width: 100%; height: 1px;" noshade="noshade" />
-   <div class="sectiontitle">Change your profile</div>
-   <p></p>
-   All settings in this section are required only if you want to order products from
-   our e-store. However, we ask you to fill in these details in all cases, because they
-   help us know our target audience, and improve the site and its contents accordingly.
-   Thank you for your cooperation!
+   <div class="sectiontitle"><h3>Change your profile<h3></div>
    <p></p>
    <mb:UserProfile ID="UserProfile1" runat="server" />
-   <table cellpadding="2" style="width: 525px;">
+   <table  class="table"  cellpadding="2" style="width: 525px;">
       <tr><td style="text-align: right;">
          <asp:Label runat="server" ID="lblFeedbackOK" SkinID="FeedbackOK" Text="Profile updated successfully" Visible="false" />
-         <asp:Button runat="server" ID="btnUpdate" ValidationGroup="EditProfile" Text="Update Profile" OnClick="btnUpdate_Click" />
+         <asp:Button class="btn btn-primary"  runat="server" ID="btnUpdate" ValidationGroup="EditProfile" Text="Update Profile" OnClick="btnUpdate_Click" />
       </td></tr>
    </table>
 </asp:Content>
