@@ -56,8 +56,7 @@ namespace MB.TheBlog.UI.Admin
       {
          if (dvwCategory.CurrentMode == DetailsViewMode.Insert)
          {
-            TextBox txtImportance = dvwCategory.FindControl("txtImportance") as TextBox;
-            txtImportance.Text = "0";
+            
          }
       }
 

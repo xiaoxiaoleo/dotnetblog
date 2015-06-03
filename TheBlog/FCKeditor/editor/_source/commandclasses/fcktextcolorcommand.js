@@ -133,7 +133,7 @@ FCKTextColorCommand.prototype._CreatePanelBody = function( targetDocument, targe
 	// Create the Button for the "Automatic" color selection.
 	var oDiv = oCell.appendChild( CreateSelectionDiv() ) ;
 	oDiv.innerHTML = 
-		'<table   cellspacing="0" cellpadding="0" width="100%" border="0">\
+		'<table cellspacing="0" cellpadding="0" width="100%" border="0">\
 			<tr>\
 				<td><div class="ColorBoxBorder"><div class="ColorBox" style="background-color: #000000"></div></div></td>\
 				<td nowrap width="100%" align="center" unselectable="on">' + FCKLang.ColorAutomatic + '</td>\
@@ -168,7 +168,7 @@ FCKTextColorCommand.prototype._CreatePanelBody = function( targetDocument, targe
 	oCell.colSpan = 8 ;
 
 	var oDiv = oCell.appendChild( CreateSelectionDiv() ) ;
-	oDiv.innerHTML = '<table   width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td nowrap align="center">' + FCKLang.ColorMoreColors + '</td></tr></table>' ;
+	oDiv.innerHTML = '<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td nowrap align="center">' + FCKLang.ColorMoreColors + '</td></tr></table>' ;
 
 	oDiv.Command = this ;
 	oDiv.onclick = FCKTextColorCommand_MoreOnClick ;

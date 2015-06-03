@@ -165,13 +165,13 @@ FCKConfig.SmileyColumns = 8 ;
 FCKConfig.SmileyWindowWidth		= 320 ;
 FCKConfig.SmileyWindowHeight	= 240 ;
 
-// start TheBlog configuration
+// start TheBeerHouse configuration
 FCKConfig.LinkBrowser = false;
 FCKConfig.ImageBrowser = false;
 FCKConfig.LinkUpload = false;
 FCKConfig.ImageUpload = false;
 
-FCKConfig.ToolbarSets["TheBlog"] = [
+FCKConfig.ToolbarSets["TheBeerHouse"] = [
 	['Source','Preview','Templates'],
 	['Cut','Copy','Paste','PasteText','PasteWord','-','Print','SpellCheck'],
 	['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
@@ -185,7 +185,7 @@ FCKConfig.ToolbarSets["TheBlog"] = [
 	['About']
 ];
 
-FCKConfig.ToolbarSets["TheBlog_Simple"] = [
+FCKConfig.ToolbarSets["TheBeerHouse_Simple"] = [
 	['Cut','Copy','PasteText','-','Print','SpellCheck'],
 	['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
 	['Bold','Italic','Underline','StrikeThrough','-','Subscript','Superscript'],
@@ -197,6 +197,6 @@ FCKConfig.ToolbarSets["TheBlog_Simple"] = [
 	['TextColor','BGColor']
 ];
 
-// end TheBlog configuration
+// end TheBeerHouse configuration
 
 if( window.console ) window.console.log( 'Config is loaded!' ) ;	// @Packager.Compactor.RemoveLine

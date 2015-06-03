@@ -620,7 +620,7 @@ sub upload_error
 <HEAD>
 <TITLE>Error Message</TITLE></HEAD>
 <BODY>
-<table  class="table"  border="1" cellspacing="10" cellpadding="10">
+<table border="1" cellspacing="10" cellpadding="10">
 	<TR bgcolor="#0000B0">
 	<TD bgcolor="#0000B0" NOWRAP><font size="-1" color="white"><B>Error Message</B></font></TD>
 	</TR>

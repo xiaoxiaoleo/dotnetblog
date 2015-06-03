@@ -199,7 +199,7 @@ FCKContextMenu.RefreshState = function()
 Sample Context Menu Output
 -----------------------------------------
 <div class="CM_ContextMenu">
-	<table   cellSpacing="0" cellPadding="0" border="0">
+	<table cellSpacing="0" cellPadding="0" border="0">
 		<tr class="CM_Disabled">
 			<td class="CM_Icon"><img alt="" src="icons/cut.gif" width="21" height="20" unselectable="on"></td>
 			<td class="CM_Label" unselectable="on">Cut</td>

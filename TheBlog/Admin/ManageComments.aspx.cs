@@ -34,6 +34,7 @@ namespace MB.TheBlog.UI.Admin
          }
       }
 
+
       protected void dvwComment_ItemCommand(object sender, DetailsViewCommandEventArgs e)
       {
          if (e.CommandName == "Cancel")

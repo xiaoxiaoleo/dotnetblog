@@ -7,9 +7,6 @@
    </div>
    <p></p>   
    <asp:Panel runat="server" ID="panSend">
-   Fill the fields below with the newsletter's subject, the body in plain-text and HTML format.
-   Only the plain-text body is compulsory. If you don't specify the HTML version, the plain-text
-   body will be used for HTML subscriptions as well.
    <p></p>
    <small><b><asp:Literal runat="server" ID="lblTitle" Text="Subject:" /></b></small><br />
    <asp:TextBox  CssClass="form-control"   ID="txtSubject" runat="server" Width="99%" MaxLength="256"></asp:TextBox>

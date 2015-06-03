@@ -52,7 +52,7 @@ FCKToolbarPanelButton.prototype.CreateInstance = function( parentToolbar )
 	this.DOMDiv.FCKToolbarButton = this ;
 	
 	var sHtml =
-		'<table   title="' + this.Tooltip + '" cellspacing="0" cellpadding="0" border="0" unselectable="on">' +
+		'<table title="' + this.Tooltip + '" cellspacing="0" cellpadding="0" border="0" unselectable="on">' +
 			'<tr>' ;
 			
 	if ( this.Style != FCK_TOOLBARITEM_ONLYTEXT ) 

@@ -49,29 +49,7 @@
                   Text="The Title field is required." ToolTip="The Title field is required." Display="Dynamic"></asp:RequiredFieldValidator>
             </EditItemTemplate>
          </asp:TemplateField>
-         <asp:TemplateField HeaderText="Importance" SortExpression="Importance">
-            <ItemTemplate>
-               <asp:Label ID="lblImportance" runat="server" Text='<%# Eval("Importance") %>'></asp:Label>
-            </ItemTemplate>
-            <EditItemTemplate>
-               <asp:TextBox  CssClass="form-control"   ID="txtImportance" runat="server" Text='<%# Bind("Importance") %>' MaxLength="256" Width="100%"></asp:TextBox>
-               <asp:RequiredFieldValidator ID="valRequireImportance" runat="server" ControlToValidate="txtImportance" SetFocusOnError="true"
-                  Text="The Importance field is required." ToolTip="The Importance field is required." Display="Dynamic"></asp:RequiredFieldValidator>
-               <asp:CompareValidator ID="valImportanceType" runat="server" Operator="DataTypeCheck" Type="Integer"
-                  ControlToValidate="txtImportance" Text="The Importance must be an integer."
-                  ToolTip="The Importance must be an integer." Display="dynamic" />
-            </EditItemTemplate>
-         </asp:TemplateField>
-         <asp:TemplateField HeaderText="Image" ConvertEmptyStringToNull="False">
-            <ItemTemplate>
-               <asp:Image ID="imgImage" runat="server" ImageUrl='<%# Eval("ImageUrl") %>' 
-                  AlternateText='<%# Eval("Title") %>'
-                  Visible='<%# !string.IsNullOrEmpty(DataBinder.Eval(Container.DataItem, "ImageUrl").ToString()) %>' />
-            </ItemTemplate>
-            <EditItemTemplate>
-               <asp:TextBox  CssClass="form-control"   ID="txtImageUrl" runat="server" Text='<%# Bind("ImageUrl") %>' MaxLength="256" Width="100%"></asp:TextBox>
-            </EditItemTemplate>
-         </asp:TemplateField>
+
          <asp:TemplateField HeaderText="Description" SortExpression="Description" ConvertEmptyStringToNull="False">
             <ItemTemplate>
                <asp:Label ID="lblDescription" runat="server" Text='<%# Eval("Description") %>' Width="100%"></asp:Label>
