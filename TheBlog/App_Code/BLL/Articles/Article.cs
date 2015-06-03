@@ -8,9 +8,9 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Collections.Generic;
-using MB.TheBeerHouse.DAL;
+using MB.TheBlog.DAL;
 
-namespace MB.TheBeerHouse.BLL.Articles
+namespace MB.TheBlog.BLL.Articles
 {
    public class Article : BaseArticle
    {
@@ -63,76 +63,6 @@ namespace MB.TheBeerHouse.BLL.Articles
             return _body;
          }
          set { _body = value; }
-      }
-
-      private string _country = "";
-      public string Country
-      {
-         get { return _country; }
-         set { _country = value; }
-      }
-
-      private string _state = "";
-      public string State
-      {
-         get { return _state; }
-         set { _state = value; }
-      }
-
-      private string _city = "";
-      public string City
-      {
-         get { return _city; }
-         set { _city = value; }
-      }
-
-      public string Location
-      {
-         get
-         {
-            string location = this.City.Split(';')[0];
-            if (this.State.Length > 0)
-            {
-               if (location.Length > 0)
-                  location += ", ";
-               location += this.State.Split(';')[0];
-            }
-            if (this.Country.Length > 0)
-            {
-               if (location.Length > 0)
-                  location += ", ";
-               location += this.Country;
-            }
-            return location;
-         }
-      }
-
-      private DateTime _releaseDate = DateTime.Now;
-      public DateTime ReleaseDate
-      {
-         get { return _releaseDate; }
-         set { _releaseDate = value; }
-      }
-
-      private DateTime _expireDate = DateTime.MaxValue;
-      public DateTime ExpireDate
-      {
-         get { return _expireDate; }
-         set { _expireDate = value; }
-      }
-
-      private bool _approved = true;
-      public bool Approved
-      {
-         get { return _approved; }
-         set { _approved = value; }
-      }
-
-      private bool _listed = true;
-      public bool Listed
-      {
-         get { return _listed; }
-         set { _listed = value; }
       }
 
       private bool _commentsEnabled = true;
@@ -196,16 +126,13 @@ namespace MB.TheBeerHouse.BLL.Articles
       {
          get
          {
-            return (this.Approved && this.ReleaseDate <= DateTime.Now && 
-               this.ExpireDate > DateTime.Now);
+            return (true);
          }
       }      
 
       public Article(int id, DateTime addedDate, string addedBy, 
          int categoryID, string categoryTitle, string title, string artabstract, 
-         string body, string country, string state, string city,
-         DateTime releaseDate, DateTime expireDate, bool approved, 
-         bool listed, bool commentsEnabled, bool onlyForMembers,
+         string body,  bool commentsEnabled, bool onlyForMembers,
          int viewCount, int votes, int totalRating)
       {
          this.ID = id;
@@ -216,13 +143,6 @@ namespace MB.TheBeerHouse.BLL.Articles
          this.Title = title;
          this.Abstract = artabstract;
          this.Body = body;
-         this.Country = country;
-         this.State = state;
-         this.City = city;
-         this.ReleaseDate = releaseDate;
-         this.ExpireDate = expireDate;
-         this.Approved = approved;
-         this.Listed = listed;
          this.CommentsEnabled = commentsEnabled;
          this.OnlyForMembers = onlyForMembers;
          this.ViewCount = viewCount;
@@ -241,18 +161,9 @@ namespace MB.TheBeerHouse.BLL.Articles
       public bool Update()
       { 
          return Article.UpdateArticle(this.ID, this.CategoryID, this.Title, 
-            this.Abstract, this.Body, this.Country, this.State, this.City,
-            this.ReleaseDate, this.ExpireDate, this.Approved, this.Listed,
-            this.CommentsEnabled, this.OnlyForMembers);
+            this.Abstract, this.Body, this.CommentsEnabled, this.OnlyForMembers);
       }
 
-      public bool Approve()
-      {
-         bool success = Article.ApproveArticle(this.ID);
-         if (success)
-            this.Approved = true;
-         return success;
-      }
 
       public bool IncrementViewCount()
       {
@@ -501,25 +412,14 @@ namespace MB.TheBeerHouse.BLL.Articles
       /// Updates an existing article
       /// </summary>
       public static bool UpdateArticle(int id, int categoryID, string title, 
-         string Abstract, string body, string country, string state, string city,
-            DateTime releaseDate, DateTime expireDate, bool approved, bool listed,
-            bool commentsEnabled, bool onlyForMembers)
+         string Abstract, string body ,bool commentsEnabled, bool onlyForMembers)
       {
          title = BizObject.ConvertNullToEmptyString(title);
          Abstract = BizObject.ConvertNullToEmptyString(Abstract);
          body = BizObject.ConvertNullToEmptyString(body);
-         country = BizObject.ConvertNullToEmptyString(country);
-         state = BizObject.ConvertNullToEmptyString(state);
-         city = BizObject.ConvertNullToEmptyString(city);
-
-         if (releaseDate == DateTime.MinValue)
-            releaseDate = DateTime.Now;
-         if (expireDate == DateTime.MinValue)
-            expireDate = DateTime.MaxValue;
-
+     
          ArticleDetails record = new ArticleDetails(id, DateTime.Now, "", categoryID,
-            "", title, Abstract, body, country, state, city, releaseDate, expireDate,
-            approved, listed, commentsEnabled, onlyForMembers, 0, 0, 0);
+            "", title, Abstract, body, commentsEnabled, onlyForMembers, 0, 0, 0);
          bool ret = SiteProvider.Articles.UpdateArticle(record);
 
          BizObject.PurgeCacheItems("articles_article_" + id.ToString());
@@ -531,30 +431,16 @@ namespace MB.TheBeerHouse.BLL.Articles
       /// Creates a new article
       /// </summary>
       public static int InsertArticle(int categoryID, string title, string Abstract,
-         string body, string country, string state, string city, DateTime releaseDate, DateTime expireDate,
-         bool approved, bool listed, bool commentsEnabled, bool onlyForMembers)
+         string body,  bool commentsEnabled, bool onlyForMembers)
       {
-         // ensure that the "approved" option is false if the current user is not
-         // an administrator or a editor (it may be a contributor for example)
-         bool canApprove = (BizObject.CurrentUser.IsInRole("Administrators") || BizObject.CurrentUser.IsInRole("Editors"));
-         if (!canApprove)
-            approved = false;
-
+ 
          title = BizObject.ConvertNullToEmptyString(title);
          Abstract = BizObject.ConvertNullToEmptyString(Abstract);
          body = BizObject.ConvertNullToEmptyString(body);
-         country = BizObject.ConvertNullToEmptyString(country);
-         state = BizObject.ConvertNullToEmptyString(state);
-         city = BizObject.ConvertNullToEmptyString(city);
-
-         if (releaseDate == DateTime.MinValue)
-            releaseDate = DateTime.Now;
-         if (expireDate == DateTime.MinValue)
-            expireDate = DateTime.MaxValue;
+         
 
          ArticleDetails record = new ArticleDetails(0, DateTime.Now, BizObject.CurrentUserName,
-            categoryID, "", title, Abstract, body, country, state, city, releaseDate, expireDate, 
-            approved, listed, commentsEnabled, onlyForMembers, 0, 0, 0);
+            categoryID, "", title, Abstract, body,  commentsEnabled, onlyForMembers, 0, 0, 0);
          int ret = SiteProvider.Articles.InsertArticle(record);
 
          BizObject.PurgeCacheItems("articles_article");
@@ -567,7 +453,7 @@ namespace MB.TheBeerHouse.BLL.Articles
       public static bool DeleteArticle(int id)
       {
          bool ret = SiteProvider.Articles.DeleteArticle(id);
-         new RecordDeletedEvent("article", id, null).Raise();
+   
          BizObject.PurgeCacheItems("articles_article");
          return ret;
       }
@@ -575,13 +461,7 @@ namespace MB.TheBeerHouse.BLL.Articles
       /// <summary>
       /// Approves an existing article
       /// </summary>
-      public static bool ApproveArticle(int id)
-      {
-         bool ret = SiteProvider.Articles.ApproveArticle(id);
-         BizObject.PurgeCacheItems("articles_article_" + id.ToString());
-         BizObject.PurgeCacheItems("articles_articles");
-         return ret;
-      }
+   
 
       /// <summary>
       /// Increments an article's view count
@@ -610,8 +490,7 @@ namespace MB.TheBeerHouse.BLL.Articles
          {
             return new Article(record.ID, record.AddedDate, record.AddedBy,
                record.CategoryID, record.CategoryTitle, record.Title, record.Abstract, record.Body,
-               record.Country, record.State, record.City, record.ReleaseDate, record.ExpireDate,
-               record.Approved, record.Listed, record.CommentsEnabled, record.OnlyForMembers,
+              record.CommentsEnabled, record.OnlyForMembers,
                record.ViewCount, record.Votes, record.TotalRating);
          }
       }

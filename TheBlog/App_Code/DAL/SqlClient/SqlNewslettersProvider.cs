@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.Web.Caching;
 
-namespace MB.TheBeerHouse.DAL.SqlClient
+namespace MB.TheBlog.DAL.SqlClient
 {
    public class SqlNewslettersProvider : NewslettersProvider
    {

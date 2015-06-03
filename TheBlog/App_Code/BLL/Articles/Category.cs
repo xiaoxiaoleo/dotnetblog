@@ -8,9 +8,9 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Collections.Generic;
-using MB.TheBeerHouse.DAL;
+using MB.TheBlog.DAL;
 
-namespace MB.TheBeerHouse.BLL.Articles
+namespace MB.TheBlog.BLL.Articles
 {
    public class Category : BaseArticle
    {
@@ -21,12 +21,7 @@ namespace MB.TheBeerHouse.BLL.Articles
          set { _title = value; }
       }
 
-      private int _importance = 0;
-      public int Importance
-      {
-         get { return _importance; }
-         private set { _importance = value; }
-      }
+ 
 
       private string _description = "";
       public string Description
@@ -35,13 +30,7 @@ namespace MB.TheBeerHouse.BLL.Articles
          set { _description = value; }
       }
 
-      private string _imageUrl = "";
-      public string ImageUrl
-      {
-         get { return _imageUrl; }
-         set { _imageUrl = value; }
-      }
-
+    
       private List<Article> _allArticles = null;
       public List<Article> AllArticles
       {
@@ -64,15 +53,14 @@ namespace MB.TheBeerHouse.BLL.Articles
          }
       }
 
-      public Category(int id, DateTime addedDate, string addedBy, string title, int importance, string description, string imageUrl)
+      public Category(int id, DateTime addedDate, string addedBy, string title,   string description )
       {
          this.ID = id;
          this.AddedDate = addedDate;
          this.AddedBy = addedBy;
          this.Title = title;
-         this.Importance = importance;
          this.Description = description;
-         this.ImageUrl = imageUrl;
+        
       }
 
       public bool Delete()
@@ -85,16 +73,10 @@ namespace MB.TheBeerHouse.BLL.Articles
 
       public bool Update()
       { 
-         return Category.UpdateCategory(this.ID, this.Title, this.Importance, this.Description, this.ImageUrl);
+         return Category.UpdateCategory(this.ID, this.Title, this.Description  );
       }
 
-      /***********************************
-      * Static methods
-      ************************************/
 
-      /// <summary>
-      /// Returns a collection with all the categories
-      /// </summary>
       public static List<Category> GetCategories()
       {
          List<Category> categories = null;
@@ -136,9 +118,9 @@ namespace MB.TheBeerHouse.BLL.Articles
       /// <summary>
       /// Updates an existing category
       /// </summary>
-      public static bool UpdateCategory(int id, string title, int importance, string description, string imageUrl)
+      public static bool UpdateCategory(int id, string title,  string description )
       {
-         CategoryDetails record = new CategoryDetails(id, DateTime.Now, "", title, importance, description, imageUrl);
+         CategoryDetails record = new CategoryDetails(id, DateTime.Now, "", title,  description );
          bool ret = SiteProvider.Articles.UpdateCategory(record);
          BizObject.PurgeCacheItems("articles_categor");
          return ret;
@@ -150,7 +132,6 @@ namespace MB.TheBeerHouse.BLL.Articles
       public static bool DeleteCategory(int id)
       {
          bool ret = SiteProvider.Articles.DeleteCategory(id);
-         new RecordDeletedEvent("category", id, null).Raise();
          BizObject.PurgeCacheItems("articles_categor");
          return ret;
       }
@@ -158,10 +139,10 @@ namespace MB.TheBeerHouse.BLL.Articles
       /// <summary>
       /// Creates a new category
       /// </summary>
-      public static int InsertCategory(string title, int importance, string description, string imageUrl)
+      public static int InsertCategory(string title, string description)
       {
          CategoryDetails record = new CategoryDetails(0, DateTime.Now,
-            BizObject.CurrentUserName, title, importance, description, imageUrl);
+            BizObject.CurrentUserName, title , description );
          int ret = SiteProvider.Articles.InsertCategory(record);
          BizObject.PurgeCacheItems("articles_categor");
          return ret;
@@ -177,7 +158,7 @@ namespace MB.TheBeerHouse.BLL.Articles
          else
          {
             return new Category(record.ID, record.AddedDate, record.AddedBy,
-               record.Title, record.Importance, record.Description, record.ImageUrl);
+               record.Title, record.Description );
          }
       }
 

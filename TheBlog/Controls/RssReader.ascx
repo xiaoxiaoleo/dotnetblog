@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeFile="RssReader.ascx.cs" Inherits="MB.TheBeerHouse.UI.Controls.RssReader" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeFile="RssReader.ascx.cs" Inherits="MB.TheBlog.UI.Controls.RssReader" %>
 
 <div class="sectiontitle">
 <asp:HyperLink ID="lnkRss" runat="server" ToolTip="Get the RSS for this content">

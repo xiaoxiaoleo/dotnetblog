@@ -1,34 +1,27 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" MasterPageFile="~/Template.master" Inherits="MB.TheBeerHouse.UI.Admin._Default" Title="TheBlog - Administration" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" MasterPageFile="~/Template.master" Inherits="MB.TheBlog.UI.Admin._Default" Title="TheBlog - Administration" %>
 <asp:Content ID="MainContent" runat="server" ContentPlaceHolderID="MainContent">
 
-<div class="sectiontitle">Administration</div>
-<p></p>
-
+ 
 <asp:Panel runat="server" ID="panAdmin">
-<div class="sectionsubtitle">Actions for Administrators</div>
+<div class="container">
+
+<div class="comment-body"><h2>Users:</h2></div>
 <ul style="list-style-type: square">
-   <li><a href="ManageUsers.aspx">Manage Users</a>: search for users by username or e-mail address, read and modify thier profile, roles, and approved status.</li>
+   <li><a href="ManageUsers.aspx"><h4>Manage Users</h4></a></li>
+ 
 </ul>
-</asp:Panel>
 
-<asp:Panel runat="server" ID="panEditor">
-<div class="sectionsubtitle">Actions for Editors</div>
+<div class="comment-body"><h2>Articles:</h2></div>
 <ul style="list-style-type: square">
-   <li><a href="ManageArticles.aspx">Manage Articles</a>: add/edit/remove categories, articles and comments,
-   review & approve articles posted by contributors.</li>
-   <li><a href="SendNewsletter.aspx">Send Newsletter</a>: create and send a newsletter to the current subscribers, in plain-text and HTML format.</li>
+   <li><a href="ManageArticles.aspx"><h4>Manage Articles</h4></a></li>
+   <li><a href="ManageCategories.aspx"><h4>Manage Categories</h4></a></li>
+   <li><a href="ManageComments.aspx"><h4>Manage Comments</h4></a></li>
+   <li><a href="SendNewsletter.aspx"><h4>Send Newsletter</h4></a></li>
 </ul>
-</asp:Panel>
+    </asp:Panel>
+</div>
 
 
-
-<asp:Panel runat="server" ID="panContributor">
-<div class="sectionsubtitle">Actions for Contributors</div>
-<ul style="list-style-type: square">
-   <li><a href="AddEditArticle.aspx">Post New Article</a>: post a new article into an existent category. 
-   If you're a contributor, your article will have to be approved by an administrator or an editor
-   before being published.</li>
-</ul>
-</asp:Panel>
+ 
 
 </asp:Content>

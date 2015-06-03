@@ -9,7 +9,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Collections.Generic;
 
-namespace MB.TheBeerHouse.DAL
+namespace MB.TheBlog.DAL
 {
    public abstract class ArticlesProvider : DataAccess
    {
@@ -55,7 +55,6 @@ namespace MB.TheBeerHouse.DAL
       public abstract bool DeleteArticle(int articleID);
       public abstract bool UpdateArticle(ArticleDetails article);
       public abstract int InsertArticle(ArticleDetails article);
-      public abstract bool ApproveArticle (int articleID);
       public abstract bool IncrementArticleViewCount(int articleID);
       public abstract bool RateArticle(int articleID, int rating);
       public abstract string GetArticleBody(int articleID);
@@ -80,9 +79,7 @@ namespace MB.TheBeerHouse.DAL
             (DateTime)reader["AddedDate"],
             reader["AddedBy"].ToString(),
             reader["Title"].ToString(),
-            (int)reader["Importance"],
-            reader["Description"].ToString(),
-            reader["ImageUrl"].ToString());
+            reader["Description"].ToString());
       }
 
       /// <summary>
@@ -114,13 +111,6 @@ namespace MB.TheBeerHouse.DAL
             reader["Title"].ToString(),            
             reader["Abstract"].ToString(),
             null,
-            reader["Country"].ToString(),
-            reader["State"].ToString(),
-            reader["City"].ToString(),
-            (reader["ReleaseDate"] == DBNull.Value ? DateTime.Now : (DateTime)reader["ReleaseDate"]),
-            (reader["ExpireDate"] == DBNull.Value ? DateTime.MaxValue : (DateTime)reader["ExpireDate"]),
-            (bool)reader["Approved"],
-            (bool)reader["Listed"],
             (bool)reader["CommentsEnabled"],
             (bool)reader["OnlyForMembers"],
             (int)reader["ViewCount"],

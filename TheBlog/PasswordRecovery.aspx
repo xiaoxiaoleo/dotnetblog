@@ -1,17 +1,14 @@
-<%@ Page Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="PasswordRecovery.aspx.cs" Inherits="MB.TheBeerHouse.UI.PasswordRecovery" Title="TheBlog - Password Recovery" %>
+<%@ Page Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="PasswordRecovery.aspx.cs" Inherits="MB.TheBlog.UI.PasswordRecovery" Title="TheBlog - Password Recovery" %>
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" Runat="Server">
-   <div class="sectiontitle">Recover your password</div>
-   <p></p>
-   If you forgot your password, you can use this page to have it sent to you by e-mail.
-   <p></p>
+  
    <asp:PasswordRecovery ID="PasswordRecovery1" runat="server">
       <UserNameTemplate>
          <div class="sectionsubtitle">Step 1: enter your username</div>
          <p></p>
-         <table  class="table"  cellpadding="2">
+         <table  class="table"  >
             <tr>
                <td style="width: 80px;" class="fieldname"><asp:Label runat="server" ID="lblUsername" AssociatedControlID="UserName" Text="Username:" /></td>
-               <td style="width: 300px;"><asp:TextBox ID="UserName" runat="server" Width="100%"></asp:TextBox></td>
+               <td style="width: 300px;"><asp:TextBox  CssClass="form-control"   ID="UserName" runat="server" Width="100%"></asp:TextBox></td>
                <td>
                   <asp:RequiredFieldValidator ID="valRequireUserName" runat="server" ControlToValidate="UserName" SetFocusOnError="true" Display="Dynamic"
                      ErrorMessage="Username is required." ToolTip="Username is required." ValidationGroup="PasswordRecovery1">*</asp:RequiredFieldValidator>
@@ -26,7 +23,7 @@
       <QuestionTemplate>
          <div class="sectionsubtitle">Step 2: answer the following question</div>
          <p></p>
-         <table  class="table"  cellpadding="2">
+         <table  class="table"   >
             <tr>
                <td style="width: 80px;" class="fieldname">Username:</td>
                <td style="width: 300px;"><asp:Literal ID="UserName" runat="server"></asp:Literal></td>
@@ -39,7 +36,7 @@
             </tr>
             <tr>
                <td class="fieldname"><asp:Label runat="server" ID="lblAnswer" AssociatedControlID="Answer" Text="Answer:" /></td>
-               <td><asp:TextBox ID="Answer" runat="server" Width="100%"></asp:TextBox></td>
+               <td><asp:TextBox  CssClass="form-control"   ID="Answer" runat="server" Width="100%"></asp:TextBox></td>
                <td>
                   <asp:RequiredFieldValidator ID="valRequireAnswer" runat="server" ControlToValidate="Answer" SetFocusOnError="true" Display="Dynamic"
                      ErrorMessage="Answer is required." ToolTip="Answer is required." ValidationGroup="PasswordRecovery1">*</asp:RequiredFieldValidator>

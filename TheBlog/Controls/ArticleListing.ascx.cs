@@ -8,11 +8,11 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using MB.TheBeerHouse;
-using MB.TheBeerHouse.UI;
-using MB.TheBeerHouse.BLL.Articles;
+using MB.TheBlog;
+using MB.TheBlog.UI;
+using MB.TheBlog.BLL.Articles;
 
-namespace MB.TheBeerHouse.UI.Controls
+namespace MB.TheBlog.UI.Controls
 {
    public partial class ArticleListing : BaseWebPart
    {
@@ -77,27 +77,15 @@ namespace MB.TheBeerHouse.UI.Controls
          set { _userCanEdit = value; }
       }
 
-      private string _userCountry = "";
-      private string _userState = "";
-      private string _userCity = "";
+ 
 
       protected void Page_Init(object sender, EventArgs e)
       {
          this.Page.RegisterRequiresControlState(this);
 
          this.UserCanEdit = (this.Page.User.Identity.IsAuthenticated &&
-            (this.Page.User.IsInRole("Administrators") || this.Page.User.IsInRole("Editors")));
-
-         try
-         {
-            if (this.Page.User.Identity.IsAuthenticated)
-            {
-               _userCountry = this.Profile.Address.Country.ToLower();
-               _userState = this.Profile.Address.State.ToLower();
-               _userCity = this.Profile.Address.City.ToLower();
-            }
-         }
-         catch (Exception) { }
+            (this.Page.User.IsInRole("Administrators")  ));
+ 
       }
 
       protected override void LoadControlState(object savedState)
@@ -165,36 +153,16 @@ namespace MB.TheBeerHouse.UI.Controls
             this.Page.User.Identity.IsAuthenticated && this.EnableHighlighter)
          {
             // hightlight the article row according to whether the current user's
-            // city, state or country is found in the article's city, state or country
+            
             Article article = (e.Row.DataItem as Article);
-            if (article.Country.ToLower() == _userCountry)
-            {
-               e.Row.CssClass = "highlightcountry";
-
-               if (Array.IndexOf<string>(
-                  article.State.ToLower().Split(';'), _userState) > -1)
-               {
-                  e.Row.CssClass = "highlightstate";
-
-                  if (Array.IndexOf<string>(
-                     article.City.ToLower().Split(';'), _userCity) > -1)
-                  {
-                     e.Row.CssClass = "highlightcity";
-                  }
-               }
-            }
+         
+         
          }
       }
 
       protected void gvwArticles_RowCommand(object sender, GridViewCommandEventArgs e)
       {
-         if (e.CommandName == "Approve")
-         {
-            int articleID = int.Parse(e.CommandArgument.ToString());
-            Article.ApproveArticle(articleID);
-            gvwArticles.PageIndex = 0;
-            gvwArticles.DataBind();
-         }
+       
       }
    }
 }

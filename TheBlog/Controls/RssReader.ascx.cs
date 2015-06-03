@@ -9,9 +9,9 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Xml;
-using MB.TheBeerHouse.UI;
+using MB.TheBlog.UI;
 
-namespace MB.TheBeerHouse.UI.Controls
+namespace MB.TheBlog.UI.Controls
 {
    public partial class RssReader : BaseWebPart
    {

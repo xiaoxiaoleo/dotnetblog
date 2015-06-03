@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="EditUser.aspx.cs" Inherits="MB.TheBeerHouse.UI.Admin.EditUser" Title="TheBlog - Edit User" %>
+<%@ Page Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="EditUser.aspx.cs" Inherits="MB.TheBlog.UI.Admin.EditUser" Title="TheBlog - Edit User" %>
 <%@ Register Src="../Controls/UserProfile.ascx" TagName="UserProfile" TagPrefix="mb" %>
 
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" Runat="Server">
@@ -49,7 +49,7 @@
       </td></tr>
       <tr><td style="text-align: right;">
          <small>Create new role: </small>
-         <asp:TextBox runat="server" ID="txtNewRole" />
+         <asp:TextBox  CssClass="form-control"   runat="server" ID="txtNewRole" />
          <asp:RequiredFieldValidator ID="valRequireNewRole" runat="server" ControlToValidate="txtNewRole" SetFocusOnError="true"
             ErrorMessage="Role name is required." ToolTip="Role name is required." ValidationGroup="CreateRole">*</asp:RequiredFieldValidator>
          <asp:Button  class="btn btn-primary" runat="server" ID="btnCreateRole" Text="Create" ValidationGroup="CreateRole" OnClick="btnCreateRole_Click" />

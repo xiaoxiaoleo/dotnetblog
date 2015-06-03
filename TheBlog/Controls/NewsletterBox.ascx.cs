@@ -8,10 +8,10 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using MB.TheBeerHouse;
-using MB.TheBeerHouse.UI;
+using MB.TheBlog;
+using MB.TheBlog.UI;
 
-namespace MB.TheBeerHouse.UI.Controls
+namespace MB.TheBlog.UI.Controls
 {
    public partial class NewsletterBox : BaseWebPart
    {

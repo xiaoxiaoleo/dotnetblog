@@ -11,10 +11,10 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using FredCK.FCKeditorV2;
 using System.Threading;
-using MB.TheBeerHouse;
-using MB.TheBeerHouse.BLL.Newsletters;
+using MB.TheBlog;
+using MB.TheBlog.BLL.Newsletters;
 
-namespace MB.TheBeerHouse.UI.Admin
+namespace MB.TheBlog.UI.Admin
 {
    public partial class SendNewsletter : BasePage
    {

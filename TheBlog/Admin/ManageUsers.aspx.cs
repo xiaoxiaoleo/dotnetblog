@@ -9,9 +9,9 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Web.Profile;
-using MB.TheBeerHouse;
+using MB.TheBlog;
 
-namespace MB.TheBeerHouse.UI.Admin
+namespace MB.TheBlog.UI.Admin
 {
    public partial class ManageUsers : BasePage
    {

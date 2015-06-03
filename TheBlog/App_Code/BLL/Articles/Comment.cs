@@ -8,9 +8,9 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Collections.Generic;
-using MB.TheBeerHouse.DAL;
+using MB.TheBlog.DAL;
 
-namespace MB.TheBeerHouse.BLL.Articles
+namespace MB.TheBlog.BLL.Articles
 {
    public class Comment : BaseArticle
    {      
@@ -230,7 +230,7 @@ namespace MB.TheBeerHouse.BLL.Articles
       public static bool DeleteComment(int id)
       {
          bool ret = SiteProvider.Articles.DeleteComment(id);
-         new RecordDeletedEvent("comment", id, null).Raise();
+   
          BizObject.PurgeCacheItems("articles_comment");
          return ret;
       }

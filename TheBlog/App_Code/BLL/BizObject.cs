@@ -11,9 +11,9 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Security.Principal;
-using MB.TheBeerHouse.DAL;
+using MB.TheBlog.DAL;
 
-namespace MB.TheBeerHouse.BLL
+namespace MB.TheBlog.BLL
 {
    public abstract class BizObject
    {

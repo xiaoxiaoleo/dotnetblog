@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="BrowseArticles.aspx.cs" Inherits="MB.TheBeerHouse.UI.BrowseArticles" Title="TheBlog - Articles" %>
+<%@ Page Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="BrowseArticles.aspx.cs" Inherits="MB.TheBlog.UI.BrowseArticles" Title="TheBlog - Articles" %>
 <%@ MasterType VirtualPath="~/Template.master" %>
 <%@ Register Src="./Controls/ArticleListing.ascx" TagName="ArticleListing" TagPrefix="mb" %>
 

@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/Template.master" ValidateRequest="false" AutoEventWireup="true" CodeFile="ArchivedNewsletters.aspx.cs" Inherits="MB.TheBeerHouse.UI.ArchivedNewsletters" Title="TheBlog - Archived Newsletters" %>
+<%@ Page Language="C#" MasterPageFile="~/Template.master" ValidateRequest="false" AutoEventWireup="true" CodeFile="ArchivedNewsletters.aspx.cs" Inherits="MB.TheBlog.UI.ArchivedNewsletters" Title="TheBlog - Archived Newsletters" %>
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" Runat="Server">   
    <div class="sectiontitle">Archived Newsletters</div>
    <p>Here is the list of archived newsletters sent in the past. Click on the newsletter's subject to read the whole content.
@@ -14,14 +14,14 @@
                <small>(sent on <%# Eval("AddedDate", "{0:d}") %>)</small>
             </ItemTemplate>
          </asp:TemplateField>
-         <asp:CommandField ButtonType="Image" DeleteImageUrl="~/Images/Delete.gif" DeleteText="Delete newsletter" ShowDeleteButton="True">
+         <asp:CommandField ButtonType="Image" DeleteImageUrl="~/Images/Delete.PNG" DeleteText="Delete newsletter" ShowDeleteButton="True">
             <ItemStyle HorizontalAlign="Center" Width="20px" />
          </asp:CommandField>
       </Columns>
       <EmptyDataTemplate><b>No newsletters to show</b></EmptyDataTemplate>   
    </asp:GridView>
    <asp:ObjectDataSource ID="objNewsletters" runat="server" SelectMethod="GetNewsletters"
-      TypeName="MB.TheBeerHouse.BLL.Newsletters.Newsletter" DeleteMethod="DeleteNewsletter">
+      TypeName="MB.TheBlog.BLL.Newsletters.Newsletter" DeleteMethod="DeleteNewsletter">
       <DeleteParameters>
          <asp:Parameter Name="id" Type="Int32" />
       </DeleteParameters>

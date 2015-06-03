@@ -697,7 +697,7 @@
     <value />
   </data>
   <data name="lnkPasswordRecoveryResource1.Text" xml:space="preserve">
-    <value>I forgot my password</value>
+    <value>forgot password?</value>
   </data>
   <data name="lnkPasswordRecoveryResource1.ToolTip" xml:space="preserve">
     <value />
@@ -709,7 +709,7 @@
     <value />
   </data>
   <data name="lnkRegisterResource1.Text" xml:space="preserve">
-    <value>Create new account</value>
+    <value>Register</value>
   </data>
   <data name="lnkRegisterResource1.ToolTip" xml:space="preserve">
     <value />

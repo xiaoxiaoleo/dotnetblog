@@ -9,7 +9,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Collections.Generic;
 
-namespace MB.TheBeerHouse.DAL
+namespace MB.TheBlog.DAL
 {
    public abstract class NewslettersProvider : DataAccess
    {

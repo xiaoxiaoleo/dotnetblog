@@ -10,9 +10,9 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using FredCK.FCKeditorV2;
-using MB.TheBeerHouse;
+using MB.TheBlog;
 
-namespace MB.TheBeerHouse.UI.Admin
+namespace MB.TheBlog.UI.Admin
 {
    public partial class AddEditArticle : BasePage
    {
@@ -25,7 +25,7 @@ namespace MB.TheBeerHouse.UI.Admin
             if (!string.IsNullOrEmpty(this.Request.QueryString["ID"]))
             {
                if (this.User.Identity.IsAuthenticated &&
-                  (this.User.IsInRole("Administrators") || this.User.IsInRole("Editors")))
+                  (this.User.IsInRole("Administrators") ))
                {
                   dvwArticle.ChangeMode(DetailsViewMode.Edit);
                   UpdateTitle();
@@ -57,12 +57,10 @@ namespace MB.TheBeerHouse.UI.Admin
             CheckBox chkListed = dvwArticle.FindControl("chkListed") as CheckBox;
             CheckBox chkCommentsEnabled = dvwArticle.FindControl("chkCommentsEnabled") as CheckBox;
 
-            chkListed.Checked = true;
+
             chkCommentsEnabled.Checked = true;
 
-            bool canApprove = (this.User.IsInRole("Administrators") || this.User.IsInRole("Editors"));
-            chkApproved.Enabled = canApprove;
-            chkApproved.Checked = canApprove;
+
          }
       }
 

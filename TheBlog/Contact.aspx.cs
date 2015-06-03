@@ -9,9 +9,9 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Net.Mail;
-using MB.TheBeerHouse;
+using MB.TheBlog;
 
-namespace MB.TheBeerHouse.UI
+namespace MB.TheBlog.UI
 {
    public partial class Contact : BasePage
    {

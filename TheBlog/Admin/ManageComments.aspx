@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/Template.master" ValidateRequest="false" AutoEventWireup="true" CodeFile="ManageComments.aspx.cs" Inherits="MB.TheBeerHouse.UI.Admin.ManageComments" Title="TheBlog - Manage Article Comments" %>
+<%@ Page Language="C#" MasterPageFile="~/Template.master" ValidateRequest="false" AutoEventWireup="true" CodeFile="ManageComments.aspx.cs" Inherits="MB.TheBlog.UI.Admin.ManageComments" Title="TheBlog - Manage Article Comments" %>
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" Runat="Server">
    <div class="sectiontitle">Manage Article Comments</div>
    <p></p>
@@ -30,17 +30,17 @@
                </div>
             </ItemTemplate>
          </asp:TemplateField>
-         <asp:CommandField ButtonType="Image" SelectImageUrl="~/Images/Edit.gif" SelectText="Update category" ShowSelectButton="True">
+         <asp:CommandField ButtonType="Button" SelectImageUrl="~/Images/Edit.PNG" SelectText="Update category" ShowSelectButton="True">
             <ItemStyle HorizontalAlign="Center" Width="20px" />
          </asp:CommandField>
-         <asp:CommandField ButtonType="Image" DeleteImageUrl="~/Images/Delete.gif" DeleteText="Delete category" ShowDeleteButton="True">
+         <asp:CommandField ButtonType="Button" DeleteImageUrl="~/Images/Delete.PNG" DeleteText="Delete category" ShowDeleteButton="True">
             <ItemStyle HorizontalAlign="Center" Width="20px" />
          </asp:CommandField>
       </Columns>
       <EmptyDataTemplate><b>No coments to show</b></EmptyDataTemplate>   
    </asp:GridView>
    <asp:ObjectDataSource ID="objComments" runat="server" DeleteMethod="DeleteComment"
-      SelectMethod="GetComments" SelectCountMethod="GetCommentCount" EnablePaging="true" TypeName="MB.TheBeerHouse.BLL.Articles.Comment">
+      SelectMethod="GetComments" SelectCountMethod="GetCommentCount" EnablePaging="true" TypeName="MB.TheBlog.BLL.Articles.Comment">
       <DeleteParameters>
          <asp:Parameter Name="id" Type="Int32" />
       </DeleteParameters>
@@ -61,7 +61,7 @@
                <asp:Label ID="lblBody" runat="server" Text='<%# Eval("Body") %>' />
             </ItemTemplate>
             <EditItemTemplate>
-               <asp:TextBox ID="txtBody" runat="server" Text='<%# Bind("Body") %>' TextMode="MultiLine" Rows="5" Width="100%"></asp:TextBox>
+               <asp:TextBox  CssClass="form-control"   ID="txtBody" runat="server" Text='<%# Bind("Body") %>' TextMode="MultiLine" Rows="5" Width="100%"></asp:TextBox>
                <asp:RequiredFieldValidator ID="valRequireBody" runat="server" ControlToValidate="txtBody" SetFocusOnError="true"
                   Text="The comment text is required." ToolTip="The comment text is required." Display="Dynamic"></asp:RequiredFieldValidator>
             </EditItemTemplate>
@@ -69,7 +69,7 @@
       </Fields>
    </asp:DetailsView>   
    <asp:ObjectDataSource ID="objCurrComment" runat="server"
-      SelectMethod="GetCommentByID" TypeName="MB.TheBeerHouse.BLL.Articles.Comment"
+      SelectMethod="GetCommentByID" TypeName="MB.TheBlog.BLL.Articles.Comment"
       UpdateMethod="UpdateComment">
       <UpdateParameters>
          <asp:Parameter Name="id" Type="Int32" />

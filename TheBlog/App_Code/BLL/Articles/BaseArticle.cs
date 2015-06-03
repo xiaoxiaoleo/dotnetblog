@@ -8,9 +8,9 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Collections.Generic;
-using MB.TheBeerHouse.DAL;
+using MB.TheBlog.DAL;
 
-namespace MB.TheBeerHouse.BLL.Articles
+namespace MB.TheBlog.BLL.Articles
 {
    public abstract class BaseArticle : BizObject
    {

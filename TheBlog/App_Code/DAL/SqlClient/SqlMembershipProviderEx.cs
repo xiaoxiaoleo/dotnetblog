@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-namespace MB.TheBeerHouse.DAL.SqlClient
+namespace MB.TheBlog.DAL.SqlClient
 {
    class SqlMembershipProviderEx : SqlMembershipProvider
    {

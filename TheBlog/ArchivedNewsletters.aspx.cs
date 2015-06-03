@@ -8,9 +8,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using MB.TheBeerHouse;
+using MB.TheBlog;
 
-namespace MB.TheBeerHouse.UI
+namespace MB.TheBlog.UI
 {
    public partial class ArchivedNewsletters : BasePage
    {
@@ -21,7 +21,7 @@ namespace MB.TheBeerHouse.UI
          // minus the number of days stored in the web.config
          DateTime toDate = DateTime.Now;
          if (!this.User.Identity.IsAuthenticated ||
-            (!this.User.IsInRole("Administrators") && !this.User.IsInRole("Editors")))
+            (!this.User.IsInRole("Administrators") ))
          {
             toDate = toDate.Subtract(
                new TimeSpan(Globals.Settings.Newsletters.HideFromArchiveInterval, 0, 0, 0));
@@ -38,7 +38,7 @@ namespace MB.TheBeerHouse.UI
 
          // if the user is not an admin or editor, hide the grid's column with the delete button
          gvwNewsletters.Columns[1].Visible = (this.User.Identity.IsAuthenticated &&
-            (this.User.IsInRole("Administrators") || this.User.IsInRole("Editors")));
+            (this.User.IsInRole("Administrators") ));
       }
 
       protected void gvwNewsletters_RowCreated(object sender, GridViewRowEventArgs e)

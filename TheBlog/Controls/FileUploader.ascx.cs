@@ -11,7 +11,7 @@ using System.Web.UI.HtmlControls;
 using System.IO;
 using System.Security;
 
-namespace MB.TheBeerHouse.UI.Controls
+namespace MB.TheBlog.UI.Controls
 {
    public partial class FileUploader : System.Web.UI.UserControl
    {
@@ -32,7 +32,7 @@ namespace MB.TheBeerHouse.UI.Controls
             try
             {
                // if not already present, create a directory named /Uploads/<CurrentUserName>
-               string dirUrl = (this.Page as MB.TheBeerHouse.UI.BasePage).BaseUrl +
+               string dirUrl = (this.Page as MB.TheBlog.UI.BasePage).BaseUrl +
                   "Uploads/" + this.Page.User.Identity.Name;
                string dirPath = Server.MapPath(dirUrl);
                if (!Directory.Exists(dirPath))

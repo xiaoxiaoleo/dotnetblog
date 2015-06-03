@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.Web.Caching;
 
-namespace MB.TheBeerHouse.DAL.SqlClient
+namespace MB.TheBlog.DAL.SqlClient
 {
    public class SqlArticlesProvider : ArticlesProvider
    {
@@ -74,10 +74,7 @@ namespace MB.TheBeerHouse.DAL.SqlClient
             SqlCommand cmd = new SqlCommand("tbh_Articles_UpdateCategory", cn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@CategoryID", SqlDbType.Int).Value = category.ID;
-            cmd.Parameters.Add("@Title", SqlDbType.NVarChar).Value = category.Title;
-            cmd.Parameters.Add("@Importance", SqlDbType.Int).Value = category.Importance;
-            cmd.Parameters.Add("@ImageUrl", SqlDbType.NVarChar).Value = category.ImageUrl;
-            cmd.Parameters.Add("@Description", SqlDbType.NVarChar).Value = category.Description;
+            cmd.Parameters.Add("@Title", SqlDbType.NVarChar).Value = category.Title;      
             cn.Open();
             int ret = ExecuteNonQuery(cmd);
             return (ret == 1);
@@ -96,8 +93,6 @@ namespace MB.TheBeerHouse.DAL.SqlClient
             cmd.Parameters.Add("@AddedDate", SqlDbType.DateTime).Value = category.AddedDate;
             cmd.Parameters.Add("@AddedBy", SqlDbType.NVarChar).Value = category.AddedBy;
             cmd.Parameters.Add("@Title", SqlDbType.NVarChar).Value = category.Title;
-            cmd.Parameters.Add("@Importance", SqlDbType.Int).Value = category.Importance;
-            cmd.Parameters.Add("@ImageUrl", SqlDbType.NVarChar).Value = category.ImageUrl;
             cmd.Parameters.Add("@Description", SqlDbType.NVarChar).Value = category.Description;
             cmd.Parameters.Add("@CategoryID", SqlDbType.Int).Direction = ParameterDirection.Output;
             cn.Open();
@@ -299,13 +294,6 @@ namespace MB.TheBeerHouse.DAL.SqlClient
             cmd.Parameters.Add("@Title", SqlDbType.NVarChar).Value = article.Title;
             cmd.Parameters.Add("@Abstract", SqlDbType.NVarChar).Value = article.Abstract;
             cmd.Parameters.Add("@Body", SqlDbType.NText).Value = article.Body;
-            cmd.Parameters.Add("@Country", SqlDbType.NVarChar).Value = article.Country;
-            cmd.Parameters.Add("@State", SqlDbType.NVarChar).Value = article.State;
-            cmd.Parameters.Add("@City", SqlDbType.NVarChar).Value = article.City;
-            cmd.Parameters.Add("@ReleaseDate", SqlDbType.DateTime).Value = article.ReleaseDate;
-            cmd.Parameters.Add("@ExpireDate", SqlDbType.DateTime).Value = article.ExpireDate;
-            cmd.Parameters.Add("@Approved", SqlDbType.Bit).Value = article.Approved;
-            cmd.Parameters.Add("@Listed", SqlDbType.Bit).Value = article.Listed;
             cmd.Parameters.Add("@CommentsEnabled", SqlDbType.Bit).Value = article.CommentsEnabled;
             cmd.Parameters.Add("@OnlyForMembers", SqlDbType.Bit).Value = article.OnlyForMembers;
             cmd.Parameters.Add("@ArticleID", SqlDbType.Int).Direction = ParameterDirection.Output;
@@ -329,13 +317,6 @@ namespace MB.TheBeerHouse.DAL.SqlClient
             cmd.Parameters.Add("@Title", SqlDbType.NVarChar).Value = article.Title;
             cmd.Parameters.Add("@Abstract", SqlDbType.NVarChar).Value = article.Abstract;
             cmd.Parameters.Add("@Body", SqlDbType.NText).Value = article.Body;
-            cmd.Parameters.Add("@Country", SqlDbType.NVarChar).Value = article.Country;
-            cmd.Parameters.Add("@State", SqlDbType.NVarChar).Value = article.State;
-            cmd.Parameters.Add("@City", SqlDbType.NVarChar).Value = article.City;
-            cmd.Parameters.Add("@ReleaseDate", SqlDbType.DateTime).Value = article.ReleaseDate;
-            cmd.Parameters.Add("@ExpireDate", SqlDbType.DateTime).Value = article.ExpireDate;
-            cmd.Parameters.Add("@Approved", SqlDbType.Bit).Value = article.Approved;
-            cmd.Parameters.Add("@Listed", SqlDbType.Bit).Value = article.Listed;
             cmd.Parameters.Add("@CommentsEnabled", SqlDbType.Bit).Value = article.CommentsEnabled;
             cmd.Parameters.Add("@OnlyForMembers", SqlDbType.Bit).Value = article.OnlyForMembers;            
             cn.Open();
@@ -347,18 +328,7 @@ namespace MB.TheBeerHouse.DAL.SqlClient
       /// <summary>
       /// Approves an article
       /// </summary>
-      public override bool ApproveArticle(int articleID)
-      {
-         using (SqlConnection cn = new SqlConnection(this.ConnectionString))
-         {
-            SqlCommand cmd = new SqlCommand("tbh_Articles_ApproveArticle", cn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@ArticleID", SqlDbType.Int).Value = articleID;
-            cn.Open();
-            int ret = ExecuteNonQuery(cmd);
-            return (ret == 1);
-         }
-      }
+     
 
       /// <summary>
       /// Increments the ViewCount of the specified article

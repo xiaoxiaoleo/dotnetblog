@@ -9,11 +9,11 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-namespace MB.TheBeerHouse
+namespace MB.TheBlog
 {
    public static class Globals
    {
-      public readonly static TheBeerHouseSection Settings = (TheBeerHouseSection)WebConfigurationManager.GetSection("theBeerHouse");
+      public readonly static TheBlogSection Settings = (TheBlogSection)WebConfigurationManager.GetSection("theBlog");
       public static string ThemesSelectorID = "";
 
       static Globals()

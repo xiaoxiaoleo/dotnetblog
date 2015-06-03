@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeFile="NewsletterBox.ascx.cs" Inherits="MB.TheBeerHouse.UI.Controls.NewsletterBox" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeFile="NewsletterBox.ascx.cs" Inherits="MB.TheBlog.UI.Controls.NewsletterBox" %>
 <div class="newsletterbox">
 <div class="sectiontitle">
 <asp:Image ID="imgArrow" runat="server" ImageUrl="~/images/arrowr.gif"

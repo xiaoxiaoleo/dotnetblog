@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="Error.aspx.cs" Inherits="MB.TheBeerHouse.UI.Error" Title="TheBlog" %>
+<%@ Page Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="Error.aspx.cs" Inherits="MB.TheBlog.UI.Error" Title="TheBlog" %>
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" Runat="Server">
    <div class="sectiontitle">Error!</div>
    <p></p>

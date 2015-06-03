@@ -18,7 +18,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TheBlog", "TheBlog\", "{E43
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "37951"
+		VWDPort = "28123"
 	EndProjectSection
 EndProject
 Global
@@ -34,8 +34,8 @@ Global
 		{E43FA133-1CF0-4220-98D1-56D0AF70567D}.Debug|.NET.ActiveCfg = Debug|.NET
 		{E43FA133-1CF0-4220-98D1-56D0AF70567D}.Debug|.NET.Build.0 = Debug|.NET
 		{E43FA133-1CF0-4220-98D1-56D0AF70567D}.Debug|Any CPU.ActiveCfg = Debug|.NET
-		{E43FA133-1CF0-4220-98D1-56D0AF70567D}.Debug|Mixed Platforms.ActiveCfg = Debug|.NET
-		{E43FA133-1CF0-4220-98D1-56D0AF70567D}.Debug|Mixed Platforms.Build.0 = Debug|.NET
+		{E43FA133-1CF0-4220-98D1-56D0AF70567D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E43FA133-1CF0-4220-98D1-56D0AF70567D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
 		{E43FA133-1CF0-4220-98D1-56D0AF70567D}.Release|.NET.ActiveCfg = Debug|.NET
 		{E43FA133-1CF0-4220-98D1-56D0AF70567D}.Release|.NET.Build.0 = Debug|.NET
 		{E43FA133-1CF0-4220-98D1-56D0AF70567D}.Release|Any CPU.ActiveCfg = Debug|.NET

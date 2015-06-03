@@ -9,10 +9,10 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Security;
-using MB.TheBeerHouse;
-using MB.TheBeerHouse.BLL.Articles;
+using MB.TheBlog;
+using MB.TheBlog.BLL.Articles;
 
-namespace MB.TheBeerHouse.UI
+namespace MB.TheBlog.UI
 {
    public partial class ShowArticle : BasePage
    {
@@ -28,7 +28,7 @@ namespace MB.TheBeerHouse.UI
       protected void Page_Init(object sender, EventArgs e)
       {
          UserCanEdit = (this.User.Identity.IsAuthenticated &&
-            (this.User.IsInRole("Administrators") || this.User.IsInRole("Editors")));
+            (this.User.IsInRole("Administrators")  ));
       }
 
       protected void Page_Load(object sender, EventArgs e)
@@ -40,14 +40,13 @@ namespace MB.TheBeerHouse.UI
 
          if (!this.IsPostBack)
          {
-            // try to load the article with the specified ID, and raise an exception
-            // if it doesn't exist
+            // 载入文章
+            // 如果文章不存在
             Article article = Article.GetArticleByID(_articleID);
             if (article == null)
                throw new ApplicationException("No article was found for the specified ID.");
 
-            // Check whether the article is published (approved, released and not yet expired).
-            // If not, continue only if the current user is an Administrator or an Editor
+            // 如果文章存在，判断阅读者的角色
             if (!article.Published)
             {
                if (!this.UserCanEdit)
@@ -67,34 +66,28 @@ namespace MB.TheBeerHouse.UI
             // if we get here, display all article's data on the page
             this.Title = string.Format(this.Title, article.Title);
             lblTitle.Text = article.Title;
-            lblNotApproved.Visible = !article.Approved;
             lblAddedBy.Text = article.AddedBy;
-            lblReleaseDate.Text = article.ReleaseDate.ToShortDateString();
             lblCategory.Text = article.CategoryTitle;
-            lblLocation.Visible = (article.Location.Length > 0);
-            if (lblLocation.Visible)
-               lblLocation.Text = string.Format(lblLocation.Text, article.Location);
-            lblRating.Text = string.Format(lblRating.Text, article.Votes);
-            ratDisplay.Value = article.AverageRating;
-            ratDisplay.Visible = (article.Votes > 0);
+            //lblRating.Text = string.Format(lblRating.Text, article.Votes);
+            //ratDisplay.Value = article.AverageRating;
+            //ratDisplay.Visible = (article.Votes > 0);
             lblViews.Text = string.Format(lblViews.Text, article.ViewCount);
             lblAbstract.Text = article.Abstract;
             lblBody.Text = article.Body;
             panComments.Visible = article.CommentsEnabled;
-            panEditArticle.Visible = this.UserCanEdit;
-            btnApprove.Visible = !article.Approved;
-            lnkEditArticle.NavigateUrl = string.Format(lnkEditArticle.NavigateUrl, _articleID);
+            //panEditArticle.Visible = this.UserCanEdit;
+            //lnkEditArticle.NavigateUrl = string.Format(lnkEditArticle.NavigateUrl, _articleID);
 
-            // hide the rating box controls if the current user has already voted for this article
+           /* hide the rating box controls if the current user has already voted for this article
             int userRating = GetUserRating();
             if (userRating > 0)
-               ShowUserRating(userRating);
+               ShowUserRating(userRating); */
          }
       }
 
-      protected void btnRate_Click(object sender, EventArgs e)
+     /* protected void btnRate_Click(object sender, EventArgs e)
       {
-         // check whether the user has already rated this article
+          check whether the user has already rated this article
          int userRating = GetUserRating();
          if (userRating > 0)
          {
@@ -130,7 +123,7 @@ namespace MB.TheBeerHouse.UI
             rating = int.Parse(cookie.Value);
          return rating;
       }
-
+*/
       protected void dlstComments_SelectedIndexChanged(object sender, EventArgs e)
       {
          dvwComment.ChangeMode(DetailsViewMode.Edit);
@@ -157,11 +150,7 @@ namespace MB.TheBeerHouse.UI
          dlstComments.DataBind();
       }
 
-      protected void btnApprove_Click(object sender, ImageClickEventArgs e)
-      {
-         Article.ApproveArticle(_articleID);
-         btnApprove.Visible = false;
-      }
+
 
       protected void btnDelete_Click(object sender, ImageClickEventArgs e)
       {
@@ -193,5 +182,17 @@ namespace MB.TheBeerHouse.UI
             (dvwComment.FindControl("txtAddedByEmail") as TextBox).Text = user.Email;
          }
       }
-   }
+      protected void dvwComment_PageIndexChanging(object sender, DetailsViewPageEventArgs e)
+      {
+
+      }
+      protected void objCurrComment_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)
+      {
+
+      }
+      protected void objComments_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)
+      {
+
+      }
+}
 }

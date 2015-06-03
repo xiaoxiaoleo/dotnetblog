@@ -8,10 +8,10 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using MB.TheBeerHouse;
-using MB.TheBeerHouse.BLL.Newsletters;
+using MB.TheBlog;
+using MB.TheBlog.BLL.Newsletters;
 
-namespace MB.TheBeerHouse.UI
+namespace MB.TheBlog.UI
 {
    public partial class ShowNewsletter : BasePage
    {
@@ -31,7 +31,7 @@ namespace MB.TheBeerHouse.UI
          int days = ((TimeSpan)(DateTime.Now - newsletter.AddedDate)).Days;
          if (Globals.Settings.Newsletters.HideFromArchiveInterval > days &&
             (!this.User.Identity.IsAuthenticated ||
-            (!this.User.IsInRole("Administrators") && !this.User.IsInRole("Editors"))))
+            (!this.User.IsInRole("Administrators")  )))
             this.RequestLogin();
 
          // show the newsletter's data

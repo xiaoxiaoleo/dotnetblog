@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-namespace MB.TheBeerHouse.UI
+namespace MB.TheBlog.UI
 {
    public partial class _Default : BasePage
    {

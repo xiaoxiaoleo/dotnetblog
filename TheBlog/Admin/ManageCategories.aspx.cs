@@ -8,9 +8,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using MB.TheBeerHouse;
+using MB.TheBlog;
 
-namespace MB.TheBeerHouse.UI.Admin
+namespace MB.TheBlog.UI.Admin
 {
    public partial class ManageCategories : BasePage
    {
@@ -35,7 +35,7 @@ namespace MB.TheBeerHouse.UI.Admin
       {
          if (e.Row.RowType == DataControlRowType.DataRow)
          {
-            ImageButton btn = e.Row.Cells[4].Controls[0] as ImageButton;
+            ImageButton btn = e.Row.Cells[3].Controls[0] as ImageButton;
             btn.OnClientClick = "if (confirm('Are you sure you want to delete this category?') == false) return false;";
          }
       }

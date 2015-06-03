@@ -10,7 +10,7 @@ using System.Web.UI.HtmlControls;
 using System.Data.Common;
 using System.Web.Caching;
 
-namespace MB.TheBeerHouse.DAL
+namespace MB.TheBlog.DAL
 {
    public abstract class DataAccess
    {

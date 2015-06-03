@@ -9,10 +9,10 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Collections.Generic;
-using MB.TheBeerHouse;
-using MB.TheBeerHouse.BLL.Articles;
+using MB.TheBlog;
+using MB.TheBlog.BLL.Articles;
 
-namespace MB.TheBeerHouse.UI
+namespace MB.TheBlog.UI
 {
    public partial class GetArticlesRss : BasePage
    {

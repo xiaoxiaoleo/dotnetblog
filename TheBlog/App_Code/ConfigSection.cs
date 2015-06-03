@@ -9,9 +9,9 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-namespace MB.TheBeerHouse
+namespace MB.TheBlog
 {
-   public class TheBeerHouseSection : ConfigurationSection
+   public class TheBlogSection : ConfigurationSection
    {
       [ConfigurationProperty("defaultConnectionStringName", DefaultValue = "LocalSqlServer")]
       public string DefaultConnectionStringName
@@ -66,7 +66,7 @@ namespace MB.TheBeerHouse
 
    public class ContactFormElement : ConfigurationElement
    {
-      [ConfigurationProperty("mailSubject", DefaultValue="Mail from TheBeerHouse: {0}")]
+      [ConfigurationProperty("mailSubject", DefaultValue="Mail from TheBlog: {0}")]
       public string MailSubject
       {
          get { return (string)base["mailSubject"]; }
@@ -112,7 +112,7 @@ namespace MB.TheBeerHouse
          }
       }
 
-      [ConfigurationProperty("providerType", DefaultValue = "MB.TheBeerHouse.DAL.SqlClient.SqlArticlesProvider")]
+      [ConfigurationProperty("providerType", DefaultValue = "MB.TheBlog.DAL.SqlClient.SqlArticlesProvider")]
       public string ProviderType
       {
          get { return (string)base["providerType"]; }
@@ -178,7 +178,7 @@ namespace MB.TheBeerHouse
          }
       }
 
-      [ConfigurationProperty("providerType", DefaultValue = "MB.TheBeerHouse.DAL.SqlClient.SqlPollsProvider")]
+      [ConfigurationProperty("providerType", DefaultValue = "MB.TheBlog.DAL.SqlClient.SqlPollsProvider")]
       public string ProviderType
       {
          get { return (string)base["providerType"]; }
@@ -251,7 +251,7 @@ namespace MB.TheBeerHouse
          }
       }
 
-      [ConfigurationProperty("providerType", DefaultValue = "MB.TheBeerHouse.DAL.SqlClient.SqlNewslettersProvider")]
+      [ConfigurationProperty("providerType", DefaultValue = "MB.TheBlog.DAL.SqlClient.SqlNewslettersProvider")]
       public string ProviderType
       {
          get { return (string)base["providerType"]; }
@@ -324,7 +324,7 @@ namespace MB.TheBeerHouse
          }
       }
 
-      [ConfigurationProperty("providerType", DefaultValue = "MB.TheBeerHouse.DAL.SqlClient.SqlForumsProvider")]
+      [ConfigurationProperty("providerType", DefaultValue = "MB.TheBlog.DAL.SqlClient.SqlForumsProvider")]
       public string ProviderType
       {
          get { return (string)base["providerType"]; }
@@ -439,7 +439,7 @@ namespace MB.TheBeerHouse
          }
       }
 
-      [ConfigurationProperty("providerType", DefaultValue = "MB.TheBeerHouse.DAL.SqlClient.SqlStoreProvider")]
+      [ConfigurationProperty("providerType", DefaultValue = "MB.TheBlog.DAL.SqlClient.SqlStoreProvider")]
       public string ProviderType
       {
          get { return (string)base["providerType"]; }

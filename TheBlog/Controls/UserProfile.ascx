@@ -1,10 +1,10 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeFile="UserProfile.ascx.cs" Inherits="MB.TheBeerHouse.UI.Controls.UserProfile" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeFile="UserProfile.ascx.cs" Inherits="MB.TheBlog.UI.Controls.UserProfile" %>
 <div class="sectionsubtitle">Site preferences</div>
 <p></p>
 
 <table  class="table"   class="table" cellpadding="2">
    <tr>
-      <td style="width: 110px;" class="fieldname"><asp:Label runat="server" ID="lblNewsletter" AssociatedControlID="ddlSubscriptions" Text="Newsletter:" /></td>
+      <td style="width: 110px;" class="form-control"><asp:Label runat="server" ID="lblNewsletter" AssociatedControlID="ddlSubscriptions" Text="Newsletter:" /></td>
       <td style="width: 400px;">
          <asp:DropDownList runat="server" ID="ddlSubscriptions">
             <asp:ListItem Text="No subscription" Value="None" Selected="true" />
@@ -14,7 +14,7 @@
       </td>
    </tr>
    <tr>
-      <td class="fieldname"><asp:Label runat="server" ID="lblLanguage" AssociatedControlID="ddlLanguages" Text="Language:" /></td>
+      <td class="form-control"><asp:Label runat="server" ID="lblLanguage" AssociatedControlID="ddlLanguages" Text="Language:" /></td>
       <td>
          <asp:DropDownList runat="server" ID="ddlLanguages">
             <asp:ListItem Text="English" Value="en-US" Selected="true" />
@@ -28,15 +28,15 @@
 <p></p>
 <table  class="table"   class="table" cellpadding="2">
    <tr>
-      <td style="width: 110px;" class="fieldname"><asp:Label runat="server" ID="lblFirstName" AssociatedControlID="txtFirstName" Text="First name:" /></td>
-      <td style="width: 400px;"><asp:TextBox ID="txtFirstName" runat="server" Width="99%"></asp:TextBox></td>
+      <td style="width: 110px;" class="form-control"><asp:Label runat="server" ID="lblFirstName" AssociatedControlID="txtFirstName" Text="First name:" /></td>
+      <td style="width: 400px;"><asp:TextBox  CssClass="form-control"   ID="txtFirstName" runat="server" Width="99%"></asp:TextBox></td>
    </tr>
    <tr>
-      <td class="fieldname"><asp:Label runat="server" ID="lblLastName" AssociatedControlID="txtLastName" Text="Last name:" /></td>
-      <td><asp:TextBox ID="txtLastName" runat="server" Width="99%"></asp:TextBox></td>
+      <td class="form-control"><asp:Label runat="server" ID="lblLastName" AssociatedControlID="txtLastName" Text="Last name:" /></td>
+      <td><asp:TextBox  CssClass="form-control"   ID="txtLastName" runat="server" Width="99%"></asp:TextBox></td>
    </tr>
    <tr>
-      <td class="fieldname"><asp:Label runat="server" ID="lblGender" AssociatedControlID="ddlGenders" Text="Gender:" /></td>
+      <td class="form-control"><asp:Label runat="server" ID="lblGender" AssociatedControlID="ddlGenders" Text="Gender:" /></td>
       <td>
          <asp:DropDownList runat="server" ID="ddlGenders">
             <asp:ListItem Text="Please select one..." Value="" Selected="True" />
@@ -46,9 +46,9 @@
       </td>
    </tr>
    <tr>
-      <td class="fieldname"><asp:Label runat="server" ID="lblBirthDate" AssociatedControlID="txtBirthDate" Text="Birth date:" /></td>
+      <td class="form-control"><asp:Label runat="server" ID="lblBirthDate" AssociatedControlID="txtBirthDate" Text="Birth date:" /></td>
       <td>
-         <asp:TextBox ID="txtBirthDate" runat="server" Width="99%"></asp:TextBox>
+         <asp:TextBox  CssClass="form-control"   ID="txtBirthDate" runat="server" Width="99%"></asp:TextBox>
          <asp:CompareValidator runat="server" ID="valBirthDateType" ControlToValidate="txtBirthDate"
             SetFocusOnError="true" Display="Dynamic" Operator="DataTypeCheck" Type="Date"
             ErrorMessage="The format of the birth date is not valid." ToolTip="The format of the birth date is not valid."
@@ -57,8 +57,8 @@
    </tr>
    
    <tr>
-      <td class="fieldname"><asp:Label runat="server" ID="lblWebsite" AssociatedControlID="txtWebsite" Text="Website:" /></td>
-      <td><asp:TextBox ID="txtWebsite" runat="server" Width="99%"></asp:TextBox></td>
+      <td class="form-control"><asp:Label runat="server" ID="lblWebsite" AssociatedControlID="txtWebsite" Text="Website:" /></td>
+      <td><asp:TextBox  CssClass="form-control"   ID="txtWebsite" runat="server" Width="99%"></asp:TextBox></td>
    </tr>
 </table>
 <p></p>
@@ -66,14 +66,12 @@
 <p></p>
 <table  class="table"  cellpadding="2">
    <tr>
-      <td style="width: 110px;" class="fieldname"><asp:Label runat="server" ID="lblStreet" AssociatedControlID="txtStreet" Text="Street:" /></td>
-      <td style="width: 400px;"><asp:TextBox runat="server" ID="txtStreet" Width="99%" /></td>
+      <td style="width: 110px;" class="form-control"><asp:Label runat="server" ID="lblStreet" AssociatedControlID="txtStreet" Text="Street:" /></td>
+      <td style="width: 400px;"><asp:TextBox  CssClass="form-control"   runat="server" ID="txtStreet" Width="99%" /></td>
    </tr>
     <tr>
-      <td style="width: 110px;" class="fieldname"><asp:Label runat="server" ID="lblPhone" AssociatedControlID="txtPhone" Text="Phone:" /></td>
-      <td style="width: 400px;"><asp:TextBox runat="server" ID="txtPhone" Width="99%" /></td>
+      <td style="width: 110px;" class="form-control"><asp:Label runat="server" ID="lblPhone" AssociatedControlID="txtPhone" Text="Phone:" /></td>
+      <td style="width: 400px;"><asp:TextBox  CssClass="form-control"   runat="server" ID="txtPhone" Width="99%" /></td>
    </tr>
 </table>
-<p></p>
-<div class="sectionsubtitle">Other contacts</div>
-<p></p>
+ 

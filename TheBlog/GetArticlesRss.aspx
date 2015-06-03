@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" ContentType="text/xml" MaintainScrollPositionOnPostback="false" EnableTheming="false" CodeFile="GetArticlesRss.aspx.cs" Inherits="MB.TheBeerHouse.UI.GetArticlesRss" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" ContentType="text/xml" MaintainScrollPositionOnPostback="false" EnableTheming="false" CodeFile="GetArticlesRss.aspx.cs" Inherits="MB.TheBlog.UI.GetArticlesRss" %>
 <head runat="server" visible="false"></head>
 
 <asp:Repeater id="rptRss" runat="server">
@@ -16,7 +16,7 @@
          <author><![CDATA[<%# Eval("AddedBy") %>]]></author>
          <description><![CDATA[<%# Eval("Abstract") %>]]></description>
          <link><![CDATA[<%# FullBaseUrl + "ShowArticle.aspx?ID=" + Eval("ID") %>]]></link>
-         <pubDate><%# string.Format("{0:R}", Eval("ReleaseDate")) %></pubDate>
+         <pubDate><%# string.Format("{0:R}", Eval("AddedDate")) %></pubDate>
       </item>
    </ItemTemplate>
    <FooterTemplate>

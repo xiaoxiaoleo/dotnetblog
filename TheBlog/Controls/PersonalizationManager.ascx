@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeFile="PersonalizationManager.ascx.cs" Inherits="MB.TheBeerHouse.UI.Controls.PersonalizationManager" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeFile="PersonalizationManager.ascx.cs" Inherits="MB.TheBlog.UI.Controls.PersonalizationManager" %>
 <div style="text-align: right;">
    <asp:WebPartManager ID="WebPartManager1" runat="server" />
    <asp:LinkButton ID="btnBrowseView" runat="server" OnClick="btnBrowseView_Click" meta:resourcekey="btnBrowseViewResource1">Browse View</asp:LinkButton>&nbsp;|&nbsp;

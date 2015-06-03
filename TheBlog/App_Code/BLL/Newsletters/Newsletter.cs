@@ -10,11 +10,11 @@ using System.Web.UI.HtmlControls;
 using System.Collections.Generic;
 using System.Threading;
 using System.Web.Profile;
-using MB.TheBeerHouse.DAL;
+using MB.TheBlog.DAL;
 using System.Text.RegularExpressions;
 using System.Net.Mail;
 
-namespace MB.TheBeerHouse.BLL.Newsletters
+namespace MB.TheBlog.BLL.Newsletters
 {
    public struct SubscriberInfo
    {
@@ -222,7 +222,7 @@ namespace MB.TheBeerHouse.BLL.Newsletters
       public static bool DeleteNewsletter(int id)
       {
          bool ret = SiteProvider.Newsletters.DeleteNewsletter(id);
-         new RecordDeletedEvent("newsletter", id, null).Raise();
+     
          BizObject.PurgeCacheItems("newsletters_newsletter");
          return ret;
       }

@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-namespace MB.TheBeerHouse.DAL
+namespace MB.TheBlog.DAL
 {
    public class ArticleDetails
    {
@@ -16,9 +16,7 @@ namespace MB.TheBeerHouse.DAL
 
       public ArticleDetails(int id, DateTime addedDate, string addedBy, 
          int categoryID, string categoryTitle, string title, string artabstract, 
-         string body, string country, string state, string city,
-         DateTime releaseDate, DateTime expireDate, bool approved, 
-         bool listed, bool commentsEnabled, bool onlyForMembers,
+         string body,  bool commentsEnabled, bool onlyForMembers,
          int viewCount, int votes, int totalRating)
       {
          this.ID = id;
@@ -29,13 +27,6 @@ namespace MB.TheBeerHouse.DAL
          this.Title = title;
          this.Abstract = artabstract;
          this.Body = body;
-         this.Country = country;
-         this.State = state;
-         this.City = city;
-         this.ReleaseDate = releaseDate;
-         this.ExpireDate = expireDate;
-         this.Approved = approved;
-         this.Listed = listed;
          this.CommentsEnabled = commentsEnabled;
          this.OnlyForMembers = onlyForMembers;
          this.ViewCount = viewCount;
@@ -98,56 +89,8 @@ namespace MB.TheBeerHouse.DAL
          get { return _body; }
          set { _body = value; }
       }
-
-      private string _country = "";
-      public string Country
-      {
-         get { return _country; }
-         set { _country = value; }
-      }
-
-      private string _state = "";
-      public string State
-      {
-         get { return _state; }
-         set { _state = value; }
-      }
-
-      private string _city = "";
-      public string City
-      {
-         get { return _city; }
-         set { _city = value; }
-      }
-
-      private DateTime _releaseDate = DateTime.Now;
-      public DateTime ReleaseDate
-      {
-         get { return _releaseDate; }
-         set { _releaseDate = value; }
-      }
-
-      private DateTime _expireDate = DateTime.MaxValue;
-      public DateTime ExpireDate
-      {
-         get { return _expireDate; }
-         set { _expireDate = value; }
-      }
-
-      private bool _approved = true;
-      public bool Approved
-      {
-         get { return _approved; }
-         set { _approved = value; }
-      }
-
-      private bool _listed = true;
-      public bool Listed
-      {
-         get { return _listed; }
-         set { _listed = value; }
-      }
-      
+ 
+    
       private bool _commentsEnabled = true;
       public bool CommentsEnabled
       {
