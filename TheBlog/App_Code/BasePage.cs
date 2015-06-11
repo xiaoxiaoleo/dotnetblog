@@ -23,25 +23,7 @@ namespace MB.TheBlog.UI
 
       protected override void OnPreInit(EventArgs e)
       {
-         string id = Globals.ThemesSelectorID;
-         if (id.Length > 0)
-         {
-            // if this is a postback caused by the theme selector's dropdownlist, retrieve
-            // the selected theme and use it for the current page request
-            if (this.Request.Form["__EVENTTARGET"] == id && !string.IsNullOrEmpty(this.Request.Form[id]))
-            {
-               this.Theme = this.Request.Form[id];
-               (HttpContext.Current.Profile as ProfileCommon).Preferences.Theme = this.Theme;
-            }
-            else
-            {
-               // if not a postback, or a postback caused by controls other then the theme selector,
-               // set the page's theme with the value found in the user's profile, if present
-               if (!string.IsNullOrEmpty((HttpContext.Current.Profile as ProfileCommon).Preferences.Theme))
-                  this.Theme = (HttpContext.Current.Profile as ProfileCommon).Preferences.Theme;
-            }
-         }
-
+        
          
          base.OnPreInit(e);
       }
@@ -82,9 +64,6 @@ namespace MB.TheBlog.UI
             "?ReturnUrl=" + this.Request.Url.PathAndQuery);
       }
 
-      public string FormatPrice(object price)
-      {
-         return Convert.ToDecimal(price).ToString("N2") + " " + Globals.Settings.Store.CurrencyCode;
-      }
+    
    }
 }

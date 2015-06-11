@@ -56,8 +56,8 @@
       </SuccessTemplate> 
       <MailDefinition
          BodyFileName="~/PasswordRecoveryMail.txt"
-         From="webmaster@effectivedotnet.com"
-         Subject="The Beer House: your password">
+         From="youfbi@foxmail.com"
+         Subject="TheBlog: your password">
       </MailDefinition>    
    </asp:PasswordRecovery>
 </asp:Content>

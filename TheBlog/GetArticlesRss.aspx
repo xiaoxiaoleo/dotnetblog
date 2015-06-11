@@ -5,9 +5,9 @@
    <HeaderTemplate>
       <rss version="2.0">
          <channel>
-            <title><![CDATA[The Beer House: <%# RssTitle %>]]></title>
+            <title><![CDATA[TheBlog: <%# RssTitle %>]]></title>
             <link><%# FullBaseUrl %></link>
-            <description>The Beer House: the site for beer fanatics</description>
+            <description>TheBlog: A blog</description>
             <copyright>Copyright 2005 by Marco Bellinaso</copyright>
    </HeaderTemplate>
    <ItemTemplate>

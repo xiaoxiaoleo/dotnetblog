@@ -19,11 +19,11 @@
    <asp:ListItem Value="100">100</asp:ListItem>
 </asp:DropDownList>
 <p></p>
-<asp:GridView SkinID="Articles" ID="gvwArticles" runat="server"  AllowPaging="True" AutoGenerateColumns="False"
+<asp:GridView CssClass="table table-striped table-bordered table-condensed" SkinID="Articles" ID="gvwArticles" runat="server"  AllowPaging="True" AutoGenerateColumns="False"
    DataKeyNames="ID" DataSourceID="objArticles" PageSize="10" ShowHeader="False"
    EmptyDataText="<b>There is no article selecd category</b>" OnRowDataBound="gvwArticles_RowDataBound" OnRowCommand="gvwArticles_RowCommand">
    <Columns>
-      <asp:TemplateField HeaderText="Article List (including those not yet published)">
+      <asp:TemplateField HeaderText="Article List">
          <HeaderStyle />
          <ItemTemplate>
 <div  class="container col-md-10 col-md-offset-1" >
@@ -48,8 +48,8 @@
   
              
             <b>Auther: </b> <asp:Literal runat="server" ID="lblAddedBy" Text='<%# Eval("AddedBy") %>' />, 
-            on <asp:Literal runat="server" ID="lblAddedDate" Text='<%# Eval("AddedDate", "{0:d}") %>' />, 
-            in category "<asp:Literal runat="server" ID="lblCategory" Text='<%# Eval("CategoryTitle") %>' />"
+            <asp:Literal runat="server" ID="lblAddedDate" Text='<%# Eval("AddedDate", "{0:d}") %>' />, 
+            Category: "<asp:Literal runat="server" ID="lblCategory" Text='<%# Eval("CategoryTitle") %>' />"
             <br />
              <b>Views: </b>
             <asp:Literal runat="server" ID="lblViews" Text='<%#  Eval("ViewCount") + " times" %>' />      

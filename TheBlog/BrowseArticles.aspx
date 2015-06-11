@@ -3,7 +3,6 @@
 <%@ Register Src="./Controls/ArticleListing.ascx" TagName="ArticleListing" TagPrefix="mb" %>
 
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" Runat="Server">
-   <div class="sectiontitle">Article List</div>
    <p></p>
    <mb:ArticleListing id="ArticleListing1" runat="server" PublishedOnly="True" />
 </asp:Content>

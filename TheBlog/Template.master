@@ -155,11 +155,13 @@
                </asp:Login>
             </AnonymousTemplate>
             <LoggedInTemplate>
-               <div id="welcomebox">
-                  <asp:LoginName ID="LoginName1" runat="server" FormatString="{0}" meta:resourcekey="LoginName1Resource1" /><br />
-                  <asp:HyperLink ID="lnkProfile" runat="server" Text="Edit Profile" NavigateUrl="~/EditProfile.aspx" meta:resourcekey="lnkProfileResource1" /><br /> 
-                  <asp:LoginStatus ID="LoginStatus1" Runat="server" meta:resourcekey="LoginStatus1Resource1" />
-               </div>
+			 <table   class="table" >
+               <tr><td width="60px">
+                  <asp:LoginName ID="LoginName1" runat="server" FormatString="{0}" meta:resourcekey="LoginName1Resource1" /><br /></td></tr>
+               <tr><td width="60px">  
+			      <asp:HyperLink ID="lnkProfile" runat="server" Text="Edit Profile" NavigateUrl="~/EditProfile.aspx" meta:resourcekey="lnkProfileResource1" /><br /> </td></tr>
+                <tr><td width="60px">   <asp:LoginStatus ID="LoginStatus1" Runat="server" meta:resourcekey="LoginStatus1Resource1" /></td></tr>
+			</table>
             </LoggedInTemplate>
          </asp:LoginView>
 

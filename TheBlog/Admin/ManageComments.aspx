@@ -10,7 +10,7 @@
       <asp:ListItem Value="100">100</asp:ListItem>
    </asp:DropDownList>
    <p></p>
-   <asp:GridView ID="gvwComments" runat="server"  AllowPaging="True" AutoGenerateColumns="False"
+   <asp:GridView CssClass="table table-striped table-bordered table-condensed"  ID="gvwComments" runat="server"  AllowPaging="True" AutoGenerateColumns="False"
       DataKeyNames="ID" DataSourceID="objComments" PageSize="25" ShowHeader="false"
       EmptyDataText="<b>There is no comment to show</b>" OnRowCreated="gvwComments_RowCreated" OnPageIndexChanged="gvwComments_PageIndexChanged" OnRowDeleted="gvwComments_RowDeleted" OnSelectedIndexChanged="gvwComments_SelectedIndexChanged">
       <Columns>

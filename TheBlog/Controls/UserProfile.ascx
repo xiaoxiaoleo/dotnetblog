@@ -18,7 +18,6 @@
       <td>
          <asp:DropDownList runat="server" ID="ddlLanguages">
             <asp:ListItem Text="English" Value="en-US" Selected="true" />
-            <asp:ListItem Text="Italian" Value="it-IT" />
          </asp:DropDownList>
       </td>
    </tr>

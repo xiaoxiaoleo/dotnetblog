@@ -51,8 +51,8 @@
       </SuccessTemplate>
       <MailDefinition
          BodyFileName="~/ChangePasswordMail.txt"
-         From="webmaster@effectivedotnet.com"
-         Subject="The Beer House: password changed">
+         From="youfbi@foxmail.com"
+         Subject="Theblog password changed">
       </MailDefinition>
    </asp:ChangePassword>
    <p></p>

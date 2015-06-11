@@ -1,10 +1,8 @@
 <%@ Page Language="C#" MasterPageFile="~/Template.master" ValidateRequest="false" AutoEventWireup="true" CodeFile="ArchivedNewsletters.aspx.cs" Inherits="MB.TheBlog.UI.ArchivedNewsletters" Title="TheBlog - Archived Newsletters" %>
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" Runat="Server">   
-   <div class="sectiontitle">Archived Newsletters</div>
-   <p>Here is the list of archived newsletters sent in the past. Click on the newsletter's subject to read the whole content.
-   If you want to receive future newsletters right into your e-mail box, 
-   <a href="Register.aspx">register now</a> to the site, if you haven't done so yet.</p>
-   <asp:GridView ID="gvwNewsletters" runat="server" AutoGenerateColumns="False" DataSourceID="objNewsletters" Width="100%" DataKeyNames="ID" OnRowCreated="gvwNewsletters_RowCreated" ShowHeader="false">
+  <li><a href="SendNewsletter.aspx"><h3>Send Newsletter</h3></a></li>
+  <div class="sectiontitle"> Newsletters History:</div>
+   <asp:GridView CssClass="table table-striped table-bordered table-condensed"  ID="gvwNewsletters" runat="server" AutoGenerateColumns="False" DataSourceID="objNewsletters" Width="100%" DataKeyNames="ID" OnRowCreated="gvwNewsletters_RowCreated" ShowHeader="false">
       <Columns>
          <asp:TemplateField>
             <ItemTemplate>

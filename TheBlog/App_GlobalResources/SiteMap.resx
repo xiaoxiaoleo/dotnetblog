@@ -118,16 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="About" xml:space="preserve">
-    <value>About</value>
+    <value>关于</value>
   </data>
   <data name="Add_Edit_Article" xml:space="preserve">
     <value>Add / Edit Article</value>
   </data>
   <data name="Admin" xml:space="preserve">
-    <value>Admin</value>
-  </data>
-  <data name="Approve_Posts" xml:space="preserve">
-    <value>Approve Posts</value>
+    <value>管理</value>
   </data>
   <data name="Article" xml:space="preserve">
     <value>Article</value>
@@ -139,19 +136,19 @@
     <value>Browse Articles</value>
   </data>
   <data name="Categories" xml:space="preserve">
-    <value>Categories</value>
+    <value>分类</value>
   </data>
   <data name="Comments" xml:space="preserve">
     <value>Comments</value>
   </data>
   <data name="Contact" xml:space="preserve">
-    <value>Contact</value>
+    <value>联系</value>
   </data>
   <data name="Edit_User" xml:space="preserve">
     <value>Edit User</value>
   </data>
   <data name="Home" xml:space="preserve">
-    <value>Home</value>
+    <value>主页</value>
   </data>
   <data name="Manage_Articles" xml:space="preserve">
     <value>Manage Articles</value>
@@ -164,8 +161,5 @@
   </data>
   <data name="Send_Newsletter" xml:space="preserve">
     <value>Send Newsletter</value>
-  </data>
-  <data name="Thread" xml:space="preserve">
-    <value>Thread</value>
   </data>
 </root>

@@ -25,11 +25,7 @@ namespace MB.TheBlog.UI.Controls
                imgAvailability.ImageUrl = "~/images/lightred.gif";
                imgAvailability.AlternateText = "Currently not available";
             }
-            else if (_value <= Globals.Settings.Store.LowAvailability)
-            {
-               imgAvailability.ImageUrl = "~/images/lightyellow.gif";
-               imgAvailability.AlternateText = "Few units available";
-            }
+
             else
             {
                imgAvailability.ImageUrl = "~/images/lightgreen.gif";

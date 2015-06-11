@@ -197,6 +197,6 @@ FCKConfig.ToolbarSets["TheBeerHouse_Simple"] = [
 	['TextColor','BGColor']
 ];
 
-// end TheBeerHouse configuration
+ 
 
 if( window.console ) window.console.log( 'Config is loaded!' ) ;	// @Packager.Compactor.RemoveLine

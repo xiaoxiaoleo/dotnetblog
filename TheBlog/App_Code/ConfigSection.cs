@@ -39,29 +39,14 @@ namespace MB.TheBlog
          get { return (ArticlesElement)base["articles"]; }
       }
 
-      [ConfigurationProperty("polls", IsRequired = true)]
-      public PollsElement Polls
-      {
-         get { return (PollsElement)base["polls"]; }
-      }
-
       [ConfigurationProperty("newsletters", IsRequired = true)]
       public NewslettersElement Newsletters
       {
          get { return (NewslettersElement)base["newsletters"]; }
       }
 
-      [ConfigurationProperty("forums", IsRequired = true)]
-      public ForumsElement Forums
-      {
-         get { return (ForumsElement)base["forums"]; }
-      }
 
-      [ConfigurationProperty("store", IsRequired = true)]
-      public StoreElement Store
-      {
-         get { return (StoreElement)base["store"]; }
-      }
+
    }
 
    public class ContactFormElement : ConfigurationElement

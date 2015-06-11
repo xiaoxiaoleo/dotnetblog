@@ -38,7 +38,7 @@ namespace MB.TheBlog.UI.Admin
             lblLastLogin.Text = user.LastLoginDate.ToString("f");
             lblLastActivity.Text = user.LastActivityDate.ToString("f");
             chkOnlineNow.Checked = user.IsOnline;
-            chkApproved.Checked = user.IsApproved;
+          //  chkApproved.Checked = user.IsApproved;
             chkLockedOut.Checked = user.IsLockedOut;
             chkLockedOut.Enabled = user.IsLockedOut;
 
@@ -62,7 +62,7 @@ namespace MB.TheBlog.UI.Admin
          lblProfileFeedbackOK.Visible = true;
       }
 
-      protected void btnCreateRole_Click(object sender, EventArgs e)
+   /*   protected void btnCreateRole_Click(object sender, EventArgs e)
       {
          if (!Roles.RoleExists(txtNewRole.Text.Trim()))
          {
@@ -70,8 +70,8 @@ namespace MB.TheBlog.UI.Admin
             BindRoles();
          }
       }
-
-      protected void btnUpdateRoles_Click(object sender, EventArgs e)
+*/
+     protected void btnUpdateRoles_Click(object sender, EventArgs e)
       {
          // first remove the user from all roles...
          string[] currRoles = Roles.GetRolesForUser(userName);
@@ -88,11 +88,11 @@ namespace MB.TheBlog.UI.Admin
 
          lblRolesFeedbackOK.Visible = true;
       }
-
+ 
       protected void chkApproved_CheckedChanged(object sender, EventArgs e)
       {
          MembershipUser user = Membership.GetUser(userName);
-         user.IsApproved = chkApproved.Checked;
+        // user.IsApproved = chkApproved.Checked;
          Membership.UpdateUser(user);
       }
 

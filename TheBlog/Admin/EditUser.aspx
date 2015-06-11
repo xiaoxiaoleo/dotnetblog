@@ -30,10 +30,6 @@
          <td><asp:CheckBox runat="server" ID="chkOnlineNow" Enabled="false" /></td>
       </tr>
       <tr>
-         <td class="fieldname"><asp:Label runat="server" ID="lblApproved" AssociatedControlID="chkApproved" Text="Approved:" /></td>
-         <td><asp:CheckBox runat="server" ID="chkApproved" AutoPostBack="true" OnCheckedChanged="chkApproved_CheckedChanged" /></td>
-      </tr>
-      <tr>
          <td class="fieldname"><asp:Label runat="server" ID="lblLockedOut" AssociatedControlID="chkLockedOut" Text="Locked Out:" /></td>
          <td><asp:CheckBox runat="server" ID="chkLockedOut" AutoPostBack="true" OnCheckedChanged="chkLockedOut_CheckedChanged" /></td>
       </tr>
@@ -47,13 +43,7 @@
          <asp:Label runat="server" ID="lblRolesFeedbackOK" SkinID="FeedbackOK" Text="Roles updated successfully" Visible="false" />
          <asp:Button  class="btn btn-primary" runat="server" ID="btnUpdateRoles" Text="Update" OnClick="btnUpdateRoles_Click" />
       </td></tr>
-      <tr><td style="text-align: right;">
-         <small>Create new role: </small>
-         <asp:TextBox  CssClass="form-control"   runat="server" ID="txtNewRole" />
-         <asp:RequiredFieldValidator ID="valRequireNewRole" runat="server" ControlToValidate="txtNewRole" SetFocusOnError="true"
-            ErrorMessage="Role name is required." ToolTip="Role name is required." ValidationGroup="CreateRole">*</asp:RequiredFieldValidator>
-         <asp:Button  class="btn btn-primary" runat="server" ID="btnCreateRole" Text="Create" ValidationGroup="CreateRole" OnClick="btnCreateRole_Click" />
-      </td></tr>
+     
    </table>
    <p></p>
    <div class="sectiontitle">Edit user's profile</div>

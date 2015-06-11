@@ -1,10 +1,8 @@
 <%@ Page Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="Contact.aspx.cs" Inherits="MB.TheBlog.UI.Contact" Title="TheBlog - Contact Us" %>
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" Runat="Server">
-   <div class="sectiontitle">Contact Us</div>
+   <div class="sectiontitle">Contact Us & FeedBack</div>
    <p></p>
-   <p style="text-align: justify;">
-   
-   For reporting errors on the site, or for general help with the site's source code, than fill the form below:
+
    <p></p>
    <table  class="table"   >
       <tr>

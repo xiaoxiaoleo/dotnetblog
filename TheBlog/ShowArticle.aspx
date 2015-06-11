@@ -3,12 +3,7 @@
 
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" Runat="Server">
     <article class="article container well">
-
-         <tr><td>
-            <asp:Label runat="server" ID="lblTitle" CssClass="title-article" /> 
-         </td>
- 
-
+           <asp:Label runat="server" ID="lblTitle" CssClass="title-article" />
       <br><br>
       <b>Author: </b> <asp:Literal runat="server" ID="lblAddedBy" />,
        Category "<asp:Literal runat="server" ID="lblCategory" />"
@@ -17,9 +12,7 @@
       <div class="articleabstract">
        <b>Dig: </b> <asp:Literal runat="server" ID="lblAbstract" />
       </div>
-	  
-
-   <br></p>
+	 <hr noshade color="#000000">
    <asp:Literal runat="server" ID="lblBody" />
    <p></p>
    <hr style="width: 100%; height: 1px;" />
@@ -104,7 +97,7 @@
          </asp:TemplateField>
       </Fields>
    </asp:DetailsView>   
-   <asp:ObjectDataSource ID="objCurrComment" runat="server" InsertMethod="InsertComment"
+   <asp:ObjectDataSource  ID="objCurrComment" runat="server" InsertMethod="InsertComment"
       SelectMethod="GetCommentByID" TypeName="MB.TheBlog.BLL.Articles.Comment"
       UpdateMethod="UpdateComment" onselecting="objCurrComment_Selecting">
       <UpdateParameters>

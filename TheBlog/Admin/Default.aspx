@@ -16,7 +16,11 @@
    <li><a href="ManageArticles.aspx"><h4>Manage Articles</h4></a></li>
    <li><a href="ManageCategories.aspx"><h4>Manage Categories</h4></a></li>
    <li><a href="ManageComments.aspx"><h4>Manage Comments</h4></a></li>
-   <li><a href="SendNewsletter.aspx"><h4>Send Newsletter</h4></a></li>
+</ul>
+
+<div class="comment-body"><h2>Newsletter:</h2></div>
+<ul style="list-style-type: square">
+   <li><a href="../ArchivedNewsletters.aspx"><h4>Manage Newsletter</h4></a></li>
 </ul>
     </asp:Panel>
 </div>

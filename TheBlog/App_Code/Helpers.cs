@@ -17,29 +17,6 @@ namespace MB.TheBlog
    public static class Helpers
    {
  
-
-
-      public static string[] GetThemes()
-      {
-         if (HttpContext.Current.Cache["SiteThemes"] != null)
-         {
-            return (string[])HttpContext.Current.Cache["SiteThemes"];
-         }
-         else
-         {
-            string themesDirPath = HttpContext.Current.Server.MapPath("~/App_Themes");
-            // get the array of themes folders under /app_themes
-            string[] themes = Directory.GetDirectories(themesDirPath);
-            for (int i = 0; i <= themes.Length - 1; i++)
-	            themes[i] = Path.GetFileName(themes[i]);
-            // cache the array with a dependency to the folder
-            CacheDependency dep = new CacheDependency(themesDirPath);
-            HttpContext.Current.Cache.Insert("SiteThemes", themes, dep);
-            return themes;
-         }
-      }
-
-
       public static void SetInputControlsHighlight(Control container, string className, bool onlyTextBoxes)
       {
          foreach (Control ctl in container.Controls)

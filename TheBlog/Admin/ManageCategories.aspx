@@ -1,9 +1,8 @@
 <%@ Page Language="C#" MasterPageFile="~/Template.master" ValidateRequest="false" AutoEventWireup="true" CodeFile="ManageCategories.aspx.cs" Inherits="MB.TheBlog.UI.Admin.ManageCategories" Title="TheBlog - Manage Categories" %>
 <%@ Register Src="../Controls/FileUploader.ascx" TagName="FileUploader" TagPrefix="mb" %>
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" Runat="Server">   
-   <div class="sectiontitle">Manage Article Categories</div>
    <p></p>
-   <asp:GridView ID="gvwCategories" runat="server" AutoGenerateColumns="False" DataSourceID="objAllCategories" Width="100%" DataKeyNames="ID" OnRowDeleted="gvwCategories_RowDeleted" OnRowCreated="gvwCategories_RowCreated" OnSelectedIndexChanged="gvwCategories_SelectedIndexChanged" ShowHeader="false">
+<asp:GridView CssClass="table table-striped table-bordered table-condensed"  ID="gvwCategories" runat="server" AutoGenerateColumns="False" DataSourceID="objAllCategories" Width="100%" DataKeyNames="ID" OnRowDeleted="gvwCategories_RowDeleted" OnRowCreated="gvwCategories_RowCreated" OnSelectedIndexChanged="gvwCategories_SelectedIndexChanged" ShowHeader="false">
       <Columns>
          <asp:TemplateField>
             <ItemTemplate>
